@@ -1,0 +1,663 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4E27E9850FE6E6B22312E83F /* libPods-YZFrame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF8C0672294CBD78ABF6DE2A /* libPods-YZFrame.a */; };
+		AB94225E2188526D00725D77 /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB94225D2188526D00725D77 /* DemoViewController.m */; };
+		ABFF48182182CCF6003C2A6E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ABFF48172182CCF6003C2A6E /* AppDelegate.m */; };
+		ABFF48202182CD07003C2A6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABFF481F2182CD07003C2A6E /* Assets.xcassets */; };
+		ABFF48232182CD07003C2A6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABFF48212182CD07003C2A6E /* LaunchScreen.storyboard */; };
+		ABFF48262182CD07003C2A6E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ABFF48252182CD07003C2A6E /* main.m */; };
+		ABFF484B2182DDB7003C2A6E /* UIButton+YZ.m in Sources */ = {isa = PBXBuildFile; fileRef = ABFF48312182DDB6003C2A6E /* UIButton+YZ.m */; };
+		ABFF484C2182DDB7003C2A6E /* NSDateComponents+YZDate.m in Sources */ = {isa = PBXBuildFile; fileRef = ABFF48342182DDB6003C2A6E /* NSDateComponents+YZDate.m */; };
+		ABFF484D2182DDB7003C2A6E /* NSDate+YZDate.m in Sources */ = {isa = PBXBuildFile; fileRef = ABFF48362182DDB6003C2A6E /* NSDate+YZDate.m */; };
+		ABFF484E2182DDB7003C2A6E /* NSString+YZDate.m in Sources */ = {isa = PBXBuildFile; fileRef = ABFF48372182DDB6003C2A6E /* NSString+YZDate.m */; };
+		ABFF484F2182DDB7003C2A6E /* UIView+YZ.m in Sources */ = {isa = PBXBuildFile; fileRef = ABFF483D2182DDB6003C2A6E /* UIView+YZ.m */; };
+		ABFF48502182DDB7003C2A6E /* UIDevice+YZ.m in Sources */ = {isa = PBXBuildFile; fileRef = ABFF48442182DDB6003C2A6E /* UIDevice+YZ.m */; };
+		ABFF48512182DDB7003C2A6E /* YZAuthID.m in Sources */ = {isa = PBXBuildFile; fileRef = ABFF48462182DDB7003C2A6E /* YZAuthID.m */; };
+		ABFF48522182DDB7003C2A6E /* UIColor+YZ.m in Sources */ = {isa = PBXBuildFile; fileRef = ABFF48492182DDB7003C2A6E /* UIColor+YZ.m */; };
+		ABFF48592182EFCB003C2A6E /* YZDeviceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ABFF48582182EFCB003C2A6E /* YZDeviceModel.m */; };
+		ABFF485E218304DD003C2A6E /* YZJsonUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = ABFF485D218304DD003C2A6E /* YZJsonUtil.m */; };
+		ABFF486121830654003C2A6E /* YZSandBoxUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = ABFF486021830654003C2A6E /* YZSandBoxUtil.m */; };
+		ABFF48642183084A003C2A6E /* YZSalt.m in Sources */ = {isa = PBXBuildFile; fileRef = ABFF48632183084A003C2A6E /* YZSalt.m */; };
+		ABFF486721830865003C2A6E /* YZRSA.m in Sources */ = {isa = PBXBuildFile; fileRef = ABFF486621830865003C2A6E /* YZRSA.m */; };
+		ABFF486A21830881003C2A6E /* YZBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = ABFF486921830881003C2A6E /* YZBase64.m */; };
+		ABFF486D21830892003C2A6E /* YZMD5.m in Sources */ = {isa = PBXBuildFile; fileRef = ABFF486C21830892003C2A6E /* YZMD5.m */; };
+		ABFF4870218308A0003C2A6E /* YZAES.m in Sources */ = {isa = PBXBuildFile; fileRef = ABFF486F218308A0003C2A6E /* YZAES.m */; };
+		ABFF487521830D77003C2A6E /* MBProgressHUD+YZ.m in Sources */ = {isa = PBXBuildFile; fileRef = ABFF487421830D77003C2A6E /* MBProgressHUD+YZ.m */; };
+		ABFF487821830DF6003C2A6E /* MBProgressHUD+YZ.bundle in Resources */ = {isa = PBXBuildFile; fileRef = ABFF487721830DF6003C2A6E /* MBProgressHUD+YZ.bundle */; };
+		ABFF487C218310C2003C2A6E /* YZHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = ABFF487B218310C2003C2A6E /* YZHandle.m */; };
+		ABFF4880218313C4003C2A6E /* YZPermission.m in Sources */ = {isa = PBXBuildFile; fileRef = ABFF487F218313C4003C2A6E /* YZPermission.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1FAFFC79F5EA0896868C120F /* Pods-YZFrame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YZFrame.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YZFrame/Pods-YZFrame.debug.xcconfig"; sourceTree = "<group>"; };
+		5668B913F8F8D99EB9F5CD35 /* Pods-YZFrame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YZFrame.release.xcconfig"; path = "Pods/Target Support Files/Pods-YZFrame/Pods-YZFrame.release.xcconfig"; sourceTree = "<group>"; };
+		AB94225C2188526D00725D77 /* DemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoViewController.h; sourceTree = "<group>"; };
+		AB94225D2188526D00725D77 /* DemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoViewController.m; sourceTree = "<group>"; };
+		ABFF48132182CCF6003C2A6E /* YZFrame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YZFrame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABFF48162182CCF6003C2A6E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		ABFF48172182CCF6003C2A6E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		ABFF481F2182CD07003C2A6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ABFF48222182CD07003C2A6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		ABFF48242182CD07003C2A6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABFF48252182CD07003C2A6E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		ABFF48312182DDB6003C2A6E /* UIButton+YZ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+YZ.m"; sourceTree = "<group>"; };
+		ABFF48322182DDB6003C2A6E /* UIButton+YZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+YZ.h"; sourceTree = "<group>"; };
+		ABFF48342182DDB6003C2A6E /* NSDateComponents+YZDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateComponents+YZDate.m"; sourceTree = "<group>"; };
+		ABFF48352182DDB6003C2A6E /* YZDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZDate.h; sourceTree = "<group>"; };
+		ABFF48362182DDB6003C2A6E /* NSDate+YZDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+YZDate.m"; sourceTree = "<group>"; };
+		ABFF48372182DDB6003C2A6E /* NSString+YZDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+YZDate.m"; sourceTree = "<group>"; };
+		ABFF48382182DDB6003C2A6E /* NSDateComponents+YZDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateComponents+YZDate.h"; sourceTree = "<group>"; };
+		ABFF48392182DDB6003C2A6E /* NSString+YZDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+YZDate.h"; sourceTree = "<group>"; };
+		ABFF483A2182DDB6003C2A6E /* NSDate+YZDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+YZDate.h"; sourceTree = "<group>"; };
+		ABFF483C2182DDB6003C2A6E /* UIView+YZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YZ.h"; sourceTree = "<group>"; };
+		ABFF483D2182DDB6003C2A6E /* UIView+YZ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YZ.m"; sourceTree = "<group>"; };
+		ABFF483F2182DDB6003C2A6E /* YZUtilsMarcos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZUtilsMarcos.h; sourceTree = "<group>"; };
+		ABFF48402182DDB6003C2A6E /* YZScreenMarcos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZScreenMarcos.h; sourceTree = "<group>"; };
+		ABFF48412182DDB6003C2A6E /* YZColorMarcos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZColorMarcos.h; sourceTree = "<group>"; };
+		ABFF48432182DDB6003C2A6E /* UIDevice+YZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+YZ.h"; sourceTree = "<group>"; };
+		ABFF48442182DDB6003C2A6E /* UIDevice+YZ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+YZ.m"; sourceTree = "<group>"; };
+		ABFF48462182DDB7003C2A6E /* YZAuthID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZAuthID.m; sourceTree = "<group>"; };
+		ABFF48472182DDB7003C2A6E /* YZAuthID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZAuthID.h; sourceTree = "<group>"; };
+		ABFF48492182DDB7003C2A6E /* UIColor+YZ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+YZ.m"; sourceTree = "<group>"; };
+		ABFF484A2182DDB7003C2A6E /* UIColor+YZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+YZ.h"; sourceTree = "<group>"; };
+		ABFF48532182DDD5003C2A6E /* YZFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZFrame.h; sourceTree = "<group>"; };
+		ABFF48572182EFCB003C2A6E /* YZDeviceModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZDeviceModel.h; sourceTree = "<group>"; };
+		ABFF48582182EFCB003C2A6E /* YZDeviceModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZDeviceModel.m; sourceTree = "<group>"; };
+		ABFF485C218304DD003C2A6E /* YZJsonUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZJsonUtil.h; sourceTree = "<group>"; };
+		ABFF485D218304DD003C2A6E /* YZJsonUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZJsonUtil.m; sourceTree = "<group>"; };
+		ABFF485F21830654003C2A6E /* YZSandBoxUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZSandBoxUtil.h; sourceTree = "<group>"; };
+		ABFF486021830654003C2A6E /* YZSandBoxUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZSandBoxUtil.m; sourceTree = "<group>"; };
+		ABFF48622183084A003C2A6E /* YZSalt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZSalt.h; sourceTree = "<group>"; };
+		ABFF48632183084A003C2A6E /* YZSalt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZSalt.m; sourceTree = "<group>"; };
+		ABFF486521830865003C2A6E /* YZRSA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZRSA.h; sourceTree = "<group>"; };
+		ABFF486621830865003C2A6E /* YZRSA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZRSA.m; sourceTree = "<group>"; };
+		ABFF486821830881003C2A6E /* YZBase64.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZBase64.h; sourceTree = "<group>"; };
+		ABFF486921830881003C2A6E /* YZBase64.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZBase64.m; sourceTree = "<group>"; };
+		ABFF486B21830892003C2A6E /* YZMD5.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZMD5.h; sourceTree = "<group>"; };
+		ABFF486C21830892003C2A6E /* YZMD5.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZMD5.m; sourceTree = "<group>"; };
+		ABFF486E218308A0003C2A6E /* YZAES.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZAES.h; sourceTree = "<group>"; };
+		ABFF486F218308A0003C2A6E /* YZAES.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZAES.m; sourceTree = "<group>"; };
+		ABFF4871218308D0003C2A6E /* YZEncrypt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZEncrypt.h; sourceTree = "<group>"; };
+		ABFF487321830D77003C2A6E /* MBProgressHUD+YZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+YZ.h"; sourceTree = "<group>"; };
+		ABFF487421830D77003C2A6E /* MBProgressHUD+YZ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+YZ.m"; sourceTree = "<group>"; };
+		ABFF487721830DF6003C2A6E /* MBProgressHUD+YZ.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = "MBProgressHUD+YZ.bundle"; sourceTree = "<group>"; };
+		ABFF487A218310C2003C2A6E /* YZHandle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZHandle.h; sourceTree = "<group>"; };
+		ABFF487B218310C2003C2A6E /* YZHandle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZHandle.m; sourceTree = "<group>"; };
+		ABFF487E218313C4003C2A6E /* YZPermission.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZPermission.h; sourceTree = "<group>"; };
+		ABFF487F218313C4003C2A6E /* YZPermission.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZPermission.m; sourceTree = "<group>"; };
+		DF8C0672294CBD78ABF6DE2A /* libPods-YZFrame.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YZFrame.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ABFF48102182CCF6003C2A6E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E27E9850FE6E6B22312E83F /* libPods-YZFrame.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		02938E5DB708C47E2D0714B3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1FAFFC79F5EA0896868C120F /* Pods-YZFrame.debug.xcconfig */,
+				5668B913F8F8D99EB9F5CD35 /* Pods-YZFrame.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		ABFF480A2182CCF6003C2A6E = {
+			isa = PBXGroup;
+			children = (
+				ABFF48152182CCF6003C2A6E /* YZFrame */,
+				ABFF48142182CCF6003C2A6E /* Products */,
+				02938E5DB708C47E2D0714B3 /* Pods */,
+				DB65EDF0A56B1D1B8C6910E4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		ABFF48142182CCF6003C2A6E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ABFF48132182CCF6003C2A6E /* YZFrame.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ABFF48152182CCF6003C2A6E /* YZFrame */ = {
+			isa = PBXGroup;
+			children = (
+				ABFF4881218316B2003C2A6E /* Demo */,
+				ABFF482F2182DD6B003C2A6E /* Core */,
+				ABFF487621830DED003C2A6E /* Resources */,
+				ABFF482D2182DD1E003C2A6E /* AppDelegate */,
+				ABFF482C2182DCE5003C2A6E /* Supporting Files */,
+			);
+			path = YZFrame;
+			sourceTree = "<group>";
+		};
+		ABFF482C2182DCE5003C2A6E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ABFF481F2182CD07003C2A6E /* Assets.xcassets */,
+				ABFF48212182CD07003C2A6E /* LaunchScreen.storyboard */,
+				ABFF48242182CD07003C2A6E /* Info.plist */,
+				ABFF48252182CD07003C2A6E /* main.m */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ABFF482D2182DD1E003C2A6E /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				ABFF48162182CCF6003C2A6E /* AppDelegate.h */,
+				ABFF48172182CCF6003C2A6E /* AppDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		ABFF482F2182DD6B003C2A6E /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				ABFF487D218313A7003C2A6E /* YZPermission */,
+				ABFF487921831098003C2A6E /* YZHandle */,
+				ABFF487221830D41003C2A6E /* YZHUD */,
+				ABFF483E2182DDB6003C2A6E /* YZMarcos */,
+				ABFF48562182EE11003C2A6E /* YZEncrypt */,
+				ABFF48542182ED99003C2A6E /* YZUtils */,
+				ABFF48452182DDB7003C2A6E /* YZAuthID */,
+				ABFF48302182DDB6003C2A6E /* YZButton */,
+				ABFF48482182DDB7003C2A6E /* YZColor */,
+				ABFF48332182DDB6003C2A6E /* YZDate */,
+				ABFF48422182DDB6003C2A6E /* YZDevice */,
+				ABFF483B2182DDB6003C2A6E /* YZView */,
+				ABFF48532182DDD5003C2A6E /* YZFrame.h */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		ABFF48302182DDB6003C2A6E /* YZButton */ = {
+			isa = PBXGroup;
+			children = (
+				ABFF48322182DDB6003C2A6E /* UIButton+YZ.h */,
+				ABFF48312182DDB6003C2A6E /* UIButton+YZ.m */,
+			);
+			path = YZButton;
+			sourceTree = "<group>";
+		};
+		ABFF48332182DDB6003C2A6E /* YZDate */ = {
+			isa = PBXGroup;
+			children = (
+				ABFF48382182DDB6003C2A6E /* NSDateComponents+YZDate.h */,
+				ABFF48342182DDB6003C2A6E /* NSDateComponents+YZDate.m */,
+				ABFF483A2182DDB6003C2A6E /* NSDate+YZDate.h */,
+				ABFF48362182DDB6003C2A6E /* NSDate+YZDate.m */,
+				ABFF48392182DDB6003C2A6E /* NSString+YZDate.h */,
+				ABFF48372182DDB6003C2A6E /* NSString+YZDate.m */,
+				ABFF48352182DDB6003C2A6E /* YZDate.h */,
+			);
+			path = YZDate;
+			sourceTree = "<group>";
+		};
+		ABFF483B2182DDB6003C2A6E /* YZView */ = {
+			isa = PBXGroup;
+			children = (
+				ABFF483C2182DDB6003C2A6E /* UIView+YZ.h */,
+				ABFF483D2182DDB6003C2A6E /* UIView+YZ.m */,
+			);
+			path = YZView;
+			sourceTree = "<group>";
+		};
+		ABFF483E2182DDB6003C2A6E /* YZMarcos */ = {
+			isa = PBXGroup;
+			children = (
+				ABFF48402182DDB6003C2A6E /* YZScreenMarcos.h */,
+				ABFF48412182DDB6003C2A6E /* YZColorMarcos.h */,
+				ABFF483F2182DDB6003C2A6E /* YZUtilsMarcos.h */,
+			);
+			path = YZMarcos;
+			sourceTree = "<group>";
+		};
+		ABFF48422182DDB6003C2A6E /* YZDevice */ = {
+			isa = PBXGroup;
+			children = (
+				ABFF48432182DDB6003C2A6E /* UIDevice+YZ.h */,
+				ABFF48442182DDB6003C2A6E /* UIDevice+YZ.m */,
+				ABFF48572182EFCB003C2A6E /* YZDeviceModel.h */,
+				ABFF48582182EFCB003C2A6E /* YZDeviceModel.m */,
+			);
+			path = YZDevice;
+			sourceTree = "<group>";
+		};
+		ABFF48452182DDB7003C2A6E /* YZAuthID */ = {
+			isa = PBXGroup;
+			children = (
+				ABFF48472182DDB7003C2A6E /* YZAuthID.h */,
+				ABFF48462182DDB7003C2A6E /* YZAuthID.m */,
+			);
+			path = YZAuthID;
+			sourceTree = "<group>";
+		};
+		ABFF48482182DDB7003C2A6E /* YZColor */ = {
+			isa = PBXGroup;
+			children = (
+				ABFF484A2182DDB7003C2A6E /* UIColor+YZ.h */,
+				ABFF48492182DDB7003C2A6E /* UIColor+YZ.m */,
+			);
+			path = YZColor;
+			sourceTree = "<group>";
+		};
+		ABFF48542182ED99003C2A6E /* YZUtils */ = {
+			isa = PBXGroup;
+			children = (
+				ABFF485C218304DD003C2A6E /* YZJsonUtil.h */,
+				ABFF485D218304DD003C2A6E /* YZJsonUtil.m */,
+				ABFF485F21830654003C2A6E /* YZSandBoxUtil.h */,
+				ABFF486021830654003C2A6E /* YZSandBoxUtil.m */,
+			);
+			path = YZUtils;
+			sourceTree = "<group>";
+		};
+		ABFF48562182EE11003C2A6E /* YZEncrypt */ = {
+			isa = PBXGroup;
+			children = (
+				ABFF486821830881003C2A6E /* YZBase64.h */,
+				ABFF486921830881003C2A6E /* YZBase64.m */,
+				ABFF486E218308A0003C2A6E /* YZAES.h */,
+				ABFF486F218308A0003C2A6E /* YZAES.m */,
+				ABFF486521830865003C2A6E /* YZRSA.h */,
+				ABFF486621830865003C2A6E /* YZRSA.m */,
+				ABFF486B21830892003C2A6E /* YZMD5.h */,
+				ABFF486C21830892003C2A6E /* YZMD5.m */,
+				ABFF48622183084A003C2A6E /* YZSalt.h */,
+				ABFF48632183084A003C2A6E /* YZSalt.m */,
+				ABFF4871218308D0003C2A6E /* YZEncrypt.h */,
+			);
+			path = YZEncrypt;
+			sourceTree = "<group>";
+		};
+		ABFF487221830D41003C2A6E /* YZHUD */ = {
+			isa = PBXGroup;
+			children = (
+				ABFF487321830D77003C2A6E /* MBProgressHUD+YZ.h */,
+				ABFF487421830D77003C2A6E /* MBProgressHUD+YZ.m */,
+			);
+			path = YZHUD;
+			sourceTree = "<group>";
+		};
+		ABFF487621830DED003C2A6E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				ABFF487721830DF6003C2A6E /* MBProgressHUD+YZ.bundle */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		ABFF487921831098003C2A6E /* YZHandle */ = {
+			isa = PBXGroup;
+			children = (
+				ABFF487A218310C2003C2A6E /* YZHandle.h */,
+				ABFF487B218310C2003C2A6E /* YZHandle.m */,
+			);
+			path = YZHandle;
+			sourceTree = "<group>";
+		};
+		ABFF487D218313A7003C2A6E /* YZPermission */ = {
+			isa = PBXGroup;
+			children = (
+				ABFF487E218313C4003C2A6E /* YZPermission.h */,
+				ABFF487F218313C4003C2A6E /* YZPermission.m */,
+			);
+			path = YZPermission;
+			sourceTree = "<group>";
+		};
+		ABFF4881218316B2003C2A6E /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				AB94225C2188526D00725D77 /* DemoViewController.h */,
+				AB94225D2188526D00725D77 /* DemoViewController.m */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
+		DB65EDF0A56B1D1B8C6910E4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DF8C0672294CBD78ABF6DE2A /* libPods-YZFrame.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ABFF48122182CCF6003C2A6E /* YZFrame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ABFF48292182CD07003C2A6E /* Build configuration list for PBXNativeTarget "YZFrame" */;
+			buildPhases = (
+				59CCD00005152694BFB0E37F /* [CP] Check Pods Manifest.lock */,
+				ABFF480F2182CCF6003C2A6E /* Sources */,
+				ABFF48102182CCF6003C2A6E /* Frameworks */,
+				ABFF48112182CCF6003C2A6E /* Resources */,
+				15A9F547949282A98206D79D /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YZFrame;
+			productName = YZFrame;
+			productReference = ABFF48132182CCF6003C2A6E /* YZFrame.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ABFF480B2182CCF6003C2A6E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = Yanzheng;
+				TargetAttributes = {
+					ABFF48122182CCF6003C2A6E = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = ABFF480E2182CCF6003C2A6E /* Build configuration list for PBXProject "YZFrame" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ABFF480A2182CCF6003C2A6E;
+			productRefGroup = ABFF48142182CCF6003C2A6E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ABFF48122182CCF6003C2A6E /* YZFrame */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ABFF48112182CCF6003C2A6E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABFF48232182CD07003C2A6E /* LaunchScreen.storyboard in Resources */,
+				ABFF48202182CD07003C2A6E /* Assets.xcassets in Resources */,
+				ABFF487821830DF6003C2A6E /* MBProgressHUD+YZ.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		15A9F547949282A98206D79D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-YZFrame/Pods-YZFrame-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/SGQRCode/SGQRCode/SGQRCode.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SGQRCode.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YZFrame/Pods-YZFrame-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		59CCD00005152694BFB0E37F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YZFrame-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ABFF480F2182CCF6003C2A6E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABFF486121830654003C2A6E /* YZSandBoxUtil.m in Sources */,
+				ABFF486A21830881003C2A6E /* YZBase64.m in Sources */,
+				ABFF484E2182DDB7003C2A6E /* NSString+YZDate.m in Sources */,
+				ABFF486D21830892003C2A6E /* YZMD5.m in Sources */,
+				ABFF487C218310C2003C2A6E /* YZHandle.m in Sources */,
+				ABFF484B2182DDB7003C2A6E /* UIButton+YZ.m in Sources */,
+				ABFF484D2182DDB7003C2A6E /* NSDate+YZDate.m in Sources */,
+				ABFF4880218313C4003C2A6E /* YZPermission.m in Sources */,
+				ABFF484C2182DDB7003C2A6E /* NSDateComponents+YZDate.m in Sources */,
+				ABFF485E218304DD003C2A6E /* YZJsonUtil.m in Sources */,
+				ABFF4870218308A0003C2A6E /* YZAES.m in Sources */,
+				ABFF484F2182DDB7003C2A6E /* UIView+YZ.m in Sources */,
+				ABFF48592182EFCB003C2A6E /* YZDeviceModel.m in Sources */,
+				ABFF48502182DDB7003C2A6E /* UIDevice+YZ.m in Sources */,
+				ABFF48262182CD07003C2A6E /* main.m in Sources */,
+				ABFF486721830865003C2A6E /* YZRSA.m in Sources */,
+				ABFF48182182CCF6003C2A6E /* AppDelegate.m in Sources */,
+				ABFF487521830D77003C2A6E /* MBProgressHUD+YZ.m in Sources */,
+				ABFF48642183084A003C2A6E /* YZSalt.m in Sources */,
+				ABFF48512182DDB7003C2A6E /* YZAuthID.m in Sources */,
+				ABFF48522182DDB7003C2A6E /* UIColor+YZ.m in Sources */,
+				AB94225E2188526D00725D77 /* DemoViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		ABFF48212182CD07003C2A6E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ABFF48222182CD07003C2A6E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ABFF48272182CD07003C2A6E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		ABFF48282182CD07003C2A6E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ABFF482A2182CD07003C2A6E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FAFFC79F5EA0896868C120F /* Pods-YZFrame.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "$(SRCROOT)/YZFrame/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.micyo.YZFrame;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ABFF482B2182CD07003C2A6E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5668B913F8F8D99EB9F5CD35 /* Pods-YZFrame.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "$(SRCROOT)/YZFrame/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.micyo.YZFrame;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ABFF480E2182CCF6003C2A6E /* Build configuration list for PBXProject "YZFrame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABFF48272182CD07003C2A6E /* Debug */,
+				ABFF48282182CD07003C2A6E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ABFF48292182CD07003C2A6E /* Build configuration list for PBXNativeTarget "YZFrame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABFF482A2182CD07003C2A6E /* Debug */,
+				ABFF482B2182CD07003C2A6E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ABFF480B2182CCF6003C2A6E /* Project object */;
+}
