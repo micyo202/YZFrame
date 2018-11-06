@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 
+#import "AppDelegate+AppService.h"
+
 #import "YZScreenMarcos.h"
 #import "DemoViewController.h"
 
@@ -26,6 +28,8 @@
     self.window.backgroundColor = UIColor.clearColor;
     self.window.rootViewController = demoVC;
     [self.window makeKeyAndVisible];
+    
+    [self initializeAvoidCrash];    // 防止崩溃
     
     return YES;
 }
