@@ -200,11 +200,11 @@
         stringLabel.numberOfLines = 0;
     });
     stringLabel.font = font;
-    stringLabel.attributedText = GetAttributedText(text);
+    stringLabel.attributedText = getAttributedText(text);
     return [stringLabel sizeThatFits:CGSizeMake(width, MAXFLOAT)].height;
 }
 #pragma mark - 计算文本在label中需要的高度
-NSMutableAttributedString *GetAttributedText(NSString *value) {//这里调整富文本的段落格式
+NSMutableAttributedString *getAttributedText(NSString *value) {//这里调整富文本的段落格式
     NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:value];
     NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
     [paragraphStyle setLineSpacing:8.0];
