@@ -12,9 +12,6 @@
 #import <UIKit/UIKit.h>
 #import "YZScreenMarcos.h"
 
-// iPhoneX、iPhoneXS、iPhoneXR、iPhoneXS Max（均包含面容识别）
-#define FaceID (WIDTH_SCREEN == 375.f && HEIGHT_SCREEN == 812.f) || (WIDTH_SCREEN == 414.f && HEIGHT_SCREEN == 896.f)
-
 @implementation YZAuthID
 
 + (instancetype)sharedInstance {
@@ -28,7 +25,7 @@
 
 - (void)yz_showAuthIDWithDescribe:(NSString *)describe block:(YZAuthIDStateBlock)block {
     if(!describe) {
-        if(FaceID){
+        if(iPhoneX_Series){
             describe = @"验证已有面容";
         }else{
             describe = @"通过Home键验证已有指纹";
