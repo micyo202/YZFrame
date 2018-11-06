@@ -26,6 +26,7 @@
 #import "YZHandle.h"
 #import "YZEncrypt.h"
 #import "YZDate.h"
+#import "YZVerify.h"
 #import "YZAuthID.h"
 #import "YZPermission.h"
 
