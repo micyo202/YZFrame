@@ -8,7 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		4E27E9850FE6E6B22312E83F /* libPods-YZFrame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF8C0672294CBD78ABF6DE2A /* libPods-YZFrame.a */; };
+		AB5C6FC42189AD0E002DC392 /* AppDelegate+AppService.m in Sources */ = {isa = PBXBuildFile; fileRef = AB5C6FC32189AD0E002DC392 /* AppDelegate+AppService.m */; };
+		AB5C6FC7218AC845002DC392 /* DemoComponentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB5C6FC6218AC845002DC392 /* DemoComponentViewController.m */; };
 		AB94225E2188526D00725D77 /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB94225D2188526D00725D77 /* DemoViewController.m */; };
+		ABA68DE92191801C00DA854F /* YZVerify.m in Sources */ = {isa = PBXBuildFile; fileRef = ABA68DE82191801C00DA854F /* YZVerify.m */; };
 		ABFF48182182CCF6003C2A6E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ABFF48172182CCF6003C2A6E /* AppDelegate.m */; };
 		ABFF48202182CD07003C2A6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABFF481F2182CD07003C2A6E /* Assets.xcassets */; };
 		ABFF48232182CD07003C2A6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABFF48212182CD07003C2A6E /* LaunchScreen.storyboard */; };
@@ -38,8 +41,14 @@
 /* Begin PBXFileReference section */
 		1FAFFC79F5EA0896868C120F /* Pods-YZFrame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YZFrame.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YZFrame/Pods-YZFrame.debug.xcconfig"; sourceTree = "<group>"; };
 		5668B913F8F8D99EB9F5CD35 /* Pods-YZFrame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YZFrame.release.xcconfig"; path = "Pods/Target Support Files/Pods-YZFrame/Pods-YZFrame.release.xcconfig"; sourceTree = "<group>"; };
+		AB5C6FC22189AD0E002DC392 /* AppDelegate+AppService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+AppService.h"; sourceTree = "<group>"; };
+		AB5C6FC32189AD0E002DC392 /* AppDelegate+AppService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+AppService.m"; sourceTree = "<group>"; };
+		AB5C6FC5218AC845002DC392 /* DemoComponentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoComponentViewController.h; sourceTree = "<group>"; };
+		AB5C6FC6218AC845002DC392 /* DemoComponentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoComponentViewController.m; sourceTree = "<group>"; };
 		AB94225C2188526D00725D77 /* DemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoViewController.h; sourceTree = "<group>"; };
 		AB94225D2188526D00725D77 /* DemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoViewController.m; sourceTree = "<group>"; };
+		ABA68DE72191801C00DA854F /* YZVerify.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZVerify.h; sourceTree = "<group>"; };
+		ABA68DE82191801C00DA854F /* YZVerify.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZVerify.m; sourceTree = "<group>"; };
 		ABFF48132182CCF6003C2A6E /* YZFrame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YZFrame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABFF48162182CCF6003C2A6E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		ABFF48172182CCF6003C2A6E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -116,6 +125,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		ABA68DE621917FEE00DA854F /* YZVerify */ = {
+			isa = PBXGroup;
+			children = (
+				ABA68DE72191801C00DA854F /* YZVerify.h */,
+				ABA68DE82191801C00DA854F /* YZVerify.m */,
+			);
+			path = YZVerify;
+			sourceTree = "<group>";
+		};
 		ABFF480A2182CCF6003C2A6E = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +180,8 @@
 			children = (
 				ABFF48162182CCF6003C2A6E /* AppDelegate.h */,
 				ABFF48172182CCF6003C2A6E /* AppDelegate.m */,
+				AB5C6FC22189AD0E002DC392 /* AppDelegate+AppService.h */,
+				AB5C6FC32189AD0E002DC392 /* AppDelegate+AppService.m */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -169,6 +189,7 @@
 		ABFF482F2182DD6B003C2A6E /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				ABA68DE621917FEE00DA854F /* YZVerify */,
 				ABFF487D218313A7003C2A6E /* YZPermission */,
 				ABFF487921831098003C2A6E /* YZHandle */,
 				ABFF487221830D41003C2A6E /* YZHUD */,
@@ -326,6 +347,8 @@
 			children = (
 				AB94225C2188526D00725D77 /* DemoViewController.h */,
 				AB94225D2188526D00725D77 /* DemoViewController.m */,
+				AB5C6FC5218AC845002DC392 /* DemoComponentViewController.h */,
+				AB5C6FC6218AC845002DC392 /* DemoComponentViewController.m */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -414,12 +437,10 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-YZFrame/Pods-YZFrame-resources.sh",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
-				"${PODS_ROOT}/SGQRCode/SGQRCode/SGQRCode.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SGQRCode.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -453,6 +474,7 @@
 			files = (
 				ABFF486121830654003C2A6E /* YZSandBoxUtil.m in Sources */,
 				ABFF486A21830881003C2A6E /* YZBase64.m in Sources */,
+				ABA68DE92191801C00DA854F /* YZVerify.m in Sources */,
 				ABFF484E2182DDB7003C2A6E /* NSString+YZDate.m in Sources */,
 				ABFF486D21830892003C2A6E /* YZMD5.m in Sources */,
 				ABFF487C218310C2003C2A6E /* YZHandle.m in Sources */,
@@ -466,9 +488,11 @@
 				ABFF48592182EFCB003C2A6E /* YZDeviceModel.m in Sources */,
 				ABFF48502182DDB7003C2A6E /* UIDevice+YZ.m in Sources */,
 				ABFF48262182CD07003C2A6E /* main.m in Sources */,
+				AB5C6FC7218AC845002DC392 /* DemoComponentViewController.m in Sources */,
 				ABFF486721830865003C2A6E /* YZRSA.m in Sources */,
 				ABFF48182182CCF6003C2A6E /* AppDelegate.m in Sources */,
 				ABFF487521830D77003C2A6E /* MBProgressHUD+YZ.m in Sources */,
+				AB5C6FC42189AD0E002DC392 /* AppDelegate+AppService.m in Sources */,
 				ABFF48642183084A003C2A6E /* YZSalt.m in Sources */,
 				ABFF48512182DDB7003C2A6E /* YZAuthID.m in Sources */,
 				ABFF48522182DDB7003C2A6E /* UIColor+YZ.m in Sources */,
