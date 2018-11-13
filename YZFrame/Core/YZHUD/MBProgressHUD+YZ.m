@@ -13,6 +13,8 @@
 #import "YZUtilsMarcos.h"
 #import "YZHandle.h"
 
+//#import <YYKit/YYKit.h>
+
 @implementation MBProgressHUD (YZ)
 
 + (MBProgressHUD*)createMBProgressHUDviewWithMessage:(NSString*)message isWindiw:(BOOL)isWindow
@@ -160,6 +162,7 @@
     return superVC;
 }
 
+/*
 #pragma mark - 顶部tip提示
 + (void)showTopTipMessage:(NSString *)msg {
     [self showTopTipMessage:msg isWindow:NO];
@@ -210,5 +213,6 @@
     }
     
 }
+*/
 
 @end

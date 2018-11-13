@@ -30,6 +30,7 @@
 #import "YZAuthID.h"
 #import "YZPermission.h"
 
+/*
 #import <YYKit/YYKit.h>
 #import <AFNetworking/AFNetworking.h>
 #import <SDWebImage/UIImageView+WebCache.h>
@@ -41,5 +42,6 @@
 #import <JDStatusBarNotification/JDStatusBarNotification.h>
 #import <MJRefresh/MJRefresh.h>
 #import <SDCycleScrollView/SDCycleScrollView.h>
+*/
 
 #endif /* YZFrame_h */

@@ -9,7 +9,6 @@
  ************************************************************/
 
 #import "MBProgressHUD.h"
-#import <YYKit/YYKit.h>
 
 @interface MBProgressHUD (YZ)
 
@@ -33,8 +32,10 @@
 
 + (void)hideHUD;
 
-//顶部弹出提示
+// 顶部弹出提示
+/*
 + (void)showTopTipMessage:(NSString *)msg;
 + (void)showTopTipMessage:(NSString *)msg isWindow:(BOOL) isWindow;
+*/
 
 @end
