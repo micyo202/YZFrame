@@ -30,16 +30,16 @@
 #import "YZAuthID.h"
 #import "YZPermission.h"
 
-#import "YYKit.h"
-#import "AFNetworking.h"
-#import "UIImageView+WebCache.h"
-#import "UIAlertController+Blocks.h"
-#import "CustomIOSAlertView.h"
-#import "LCActionSheet.h"
-#import "ActionSheetPicker.h"
-#import "YBPopupMenu.h"
-#import "JDStatusBarNotification.h"
-#import "MJRefresh.h"
-#import "SDCycleScrollView.h"
+#import <YYKit/YYKit.h>
+#import <AFNetworking/AFNetworking.h>
+#import <SDWebImage/UIImageView+WebCache.h>
+#import <UIAlertController+Blocks/UIAlertController+Blocks.h>
+#import <CustomIOSAlertView/CustomIOSAlertView.h>
+#import <LCActionSheet/LCActionSheet.h>
+#import <ActionSheetPicker-3.0/ActionSheetPicker.h>
+#import <YBPopupMenu/YBPopupMenu.h>
+#import <JDStatusBarNotification/JDStatusBarNotification.h>
+#import <MJRefresh/MJRefresh.h>
+#import <SDCycleScrollView/SDCycleScrollView.h>
 
 #endif /* YZFrame_h */
