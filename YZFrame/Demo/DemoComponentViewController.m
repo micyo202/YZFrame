@@ -9,6 +9,19 @@
  ************************************************************/
 
 #import "DemoComponentViewController.h"
+
+#import <YYKit/YYKit.h>
+//#import <AFNetworking/AFNetworking.h>
+//#import <SDWebImage/UIImageView+WebCache.h>
+#import <UIAlertController+Blocks/UIAlertController+Blocks.h>
+#import <CustomIOSAlertView/CustomIOSAlertView.h>
+#import <LCActionSheet/LCActionSheet.h>
+#import <ActionSheetPicker-3.0/ActionSheetPicker.h>
+#import <YBPopupMenu/YBPopupMenu.h>
+#import <JDStatusBarNotification/JDStatusBarNotification.h>
+#import <MJRefresh/MJRefresh.h>
+#import <SDCycleScrollView/SDCycleScrollView.h>
+
 #import "YZFrame.h"
 
 @interface DemoComponentViewController () <SDCycleScrollViewDelegate>

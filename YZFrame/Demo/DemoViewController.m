@@ -10,6 +10,18 @@
 
 #import "DemoViewController.h"
 
+#import <YYKit/YYKit.h>
+//#import <AFNetworking/AFNetworking.h>
+//#import <SDWebImage/UIImageView+WebCache.h>
+#import <UIAlertController+Blocks/UIAlertController+Blocks.h>
+#import <CustomIOSAlertView/CustomIOSAlertView.h>
+#import <LCActionSheet/LCActionSheet.h>
+#import <ActionSheetPicker-3.0/ActionSheetPicker.h>
+#import <YBPopupMenu/YBPopupMenu.h>
+#import <JDStatusBarNotification/JDStatusBarNotification.h>
+#import <MJRefresh/MJRefresh.h>
+#import <SDCycleScrollView/SDCycleScrollView.h>
+
 #import "YZFrame.h"
 
 @interface DemoViewController () <UITableViewDelegate, UITableViewDataSource, YBPopupMenuDelegate>
@@ -248,7 +260,7 @@ static NSString *const cellReuseIdentifier = @"cellReuseIdentifier";
                 [MBProgressHUD showErrorMessage:@"提示信息"];
             }
             if(6 == buttonIndex){
-                [MBProgressHUD showTopTipMessage:@"提示信息" isWindow:YES];
+                //[MBProgressHUD showTopTipMessage:@"提示信息" isWindow:YES];
             }
             if(7 == buttonIndex){
                 [MBProgressHUD showActivityMessageInView:@"提示信息" timer:2];
