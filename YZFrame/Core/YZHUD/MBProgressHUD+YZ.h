@@ -9,6 +9,7 @@
  ************************************************************/
 
 #import "MBProgressHUD.h"
+#import <YYKit/YYKit.h>
 
 @interface MBProgressHUD (YZ)
 
