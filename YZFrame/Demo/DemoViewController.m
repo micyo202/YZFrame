@@ -262,7 +262,7 @@ static NSString *const cellReuseIdentifier = @"cellReuseIdentifier";
                 [MBProgressHUD showErrorMessage:@"提示信息"];
             }
             if(6 == buttonIndex){
-                //[MBProgressHUD showTopTipMessage:@"提示信息" isWindow:YES];
+                [MBProgressHUD showTopTipMessage:@"提示信息" isWindow:YES];
             }
             if(7 == buttonIndex){
                 [MBProgressHUD showActivityMessageInView:@"提示信息" timer:2];
