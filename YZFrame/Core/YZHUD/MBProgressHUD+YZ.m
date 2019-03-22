@@ -13,12 +13,11 @@
 #import "YZUtilsMarcos.h"
 #import "YZHandle.h"
 
-//#import <YYKit/YYKit.h>
+#import "YYKit/YYKit.h"
 
 @implementation MBProgressHUD (YZ)
 
-+ (MBProgressHUD*)createMBProgressHUDviewWithMessage:(NSString*)message isWindiw:(BOOL)isWindow
-{
++ (MBProgressHUD*)createMBProgressHUDviewWithMessage:(NSString*)message isWindiw:(BOOL)isWindow {
     UIView  *view = isWindow? (UIView*)[UIApplication sharedApplication].delegate.window:[self getCurrentUIVC].view;
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
     hud.animationType = MBProgressHUDAnimationZoom;
@@ -29,58 +28,56 @@
     hud.contentColor = [UIColor whiteColor];    // 设置字体颜色
     return hud;
 }
-#pragma mark-------------------- show Tip----------------------------
 
-+ (void)showTipMessageInWindow:(NSString*)message
-{
+#pragma mark - show Tip
++ (void)showTipMessageInWindow:(NSString*)message {
     [self showTipMessage:message isWindow:true timer:2.f];
 }
-+ (void)showTipMessageInView:(NSString*)message
-{
+
++ (void)showTipMessageInView:(NSString*)message {
     [self showTipMessage:message isWindow:false timer:2.f];
 }
-+ (void)showTipMessageInWindow:(NSString*)message timer:(int)aTimer
-{
+
++ (void)showTipMessageInWindow:(NSString*)message timer:(int)aTimer {
     [self showTipMessage:message isWindow:true timer:aTimer];
 }
-+ (void)showTipMessageInView:(NSString*)message timer:(int)aTimer
-{
+
++ (void)showTipMessageInView:(NSString*)message timer:(int)aTimer {
     [self showTipMessage:message isWindow:false timer:aTimer];
 }
-+ (void)showTipMessage:(NSString*)message isWindow:(BOOL)isWindow timer:(int)aTimer
-{
+
++ (void)showTipMessage:(NSString*)message isWindow:(BOOL)isWindow timer:(int)aTimer {
     MBProgressHUD *hud = [self createMBProgressHUDviewWithMessage:message isWindiw:isWindow];
     hud.mode = MBProgressHUDModeText;
     [hud hideAnimated:YES afterDelay:aTimer];
 }
-#pragma mark-------------------- show Activity----------------------------
 
-+ (void)showActivityMessageInWindow:(NSString*)message
-{
+#pragma mark - show Activity
++ (void)showActivityMessageInWindow:(NSString*)message {
     [self showActivityMessage:message isWindow:true timer:0];
 }
-+ (void)showActivityMessageInView:(NSString*)message
-{
+
++ (void)showActivityMessageInView:(NSString*)message {
     [self showActivityMessage:message isWindow:false timer:0];
 }
-+ (void)showActivityMessageInWindow:(NSString*)message timer:(int)aTimer
-{
+
++ (void)showActivityMessageInWindow:(NSString*)message timer:(int)aTimer {
     [self showActivityMessage:message isWindow:true timer:aTimer];
 }
-+ (void)showActivityMessageInView:(NSString*)message timer:(int)aTimer
-{
+
++ (void)showActivityMessageInView:(NSString*)message timer:(int)aTimer {
     [self showActivityMessage:message isWindow:false timer:aTimer];
 }
-+ (void)showActivityMessage:(NSString*)message isWindow:(BOOL)isWindow timer:(int)aTimer
-{
+
++ (void)showActivityMessage:(NSString*)message isWindow:(BOOL)isWindow timer:(int)aTimer {
     MBProgressHUD *hud  =  [self createMBProgressHUDviewWithMessage:message isWindiw:isWindow];
     hud.mode = MBProgressHUDModeIndeterminate;
     if (aTimer>0) {
         [hud hideAnimated:YES afterDelay:aTimer];
     }
 }
-#pragma mark-------------------- show Image----------------------------
 
+#pragma mark - show Image
 + (void)showSuccessMessage:(NSString *)message {
     NSString *name =@"MBProgressHUD+YZ.bundle/MBProgressHUD/MBHUD_Success";
     [self showCustomIconInWindow:name message:message];
@@ -162,8 +159,7 @@
     return superVC;
 }
 
-/*
-#pragma mark - 顶部tip提示
+#pragma mark - show Top Tip
 + (void)showTopTipMessage:(NSString *)msg {
     [self showTopTipMessage:msg isWindow:NO];
 }
@@ -213,6 +209,5 @@
     }
     
 }
-*/
 
 @end
