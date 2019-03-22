@@ -5,7 +5,7 @@ inhibit_all_warnings!                           # 全局禁止显示警告
 target 'YZFrame' do
 
 pod 'AvoidCrash'                                # 防止 NSArray、NSDictionary 崩溃闪退
-pod 'AFNetworking', '~> 3.0'                    # 网络访问库
+#pod 'AFNetworking', '~> 3.0'                    # 网络访问库
 pod 'UIAlertController+Blocks'                  # 弹框提示
 pod 'CustomIOSAlertView', '~> 0.9.5'            # 自定义弹出对话视图
 pod 'LCActionSheet'                             # 底部弹出选择列表组件
