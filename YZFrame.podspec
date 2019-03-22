@@ -11,4 +11,5 @@ Pod::Spec.new do |s|
     s.resources    = 'YZFrame/Resources/*.bundle'
     s.requires_arc = true
     s.dependency 'MBProgressHUD', '~> 1.1.0'
+    s.dependency 'YYKit'
 end
