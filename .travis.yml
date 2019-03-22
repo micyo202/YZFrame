@@ -24,4 +24,4 @@ before_install:
 
 script:
     - set -o pipefail
-
+    - xcodebuild clean build -workspace YZFrame.xcworkspace -scheme 'YZFrame' | xcpretty
