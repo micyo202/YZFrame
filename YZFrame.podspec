@@ -10,4 +10,5 @@ Pod::Spec.new do |s|
     s.source_files = 'YZFrame/Core/**/*.{h,m}'
     s.resources    = 'YZFrame/Resources/*.bundle'
     s.requires_arc = true
+    s.dependency   = 'MBProgressHUD', '~> 1.1.0'
 end
