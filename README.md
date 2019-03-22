@@ -3,7 +3,7 @@
 [![Version](https://img.shields.io/badge/version-1.0.0-yellow.svg)](https://github.com/micyo202/YZFrame)
 [![Cocoapods](https://img.shields.io/badge/pod-v1.5.3-green.svg)](https://cocoapods.org/?q=YZFrame)
 [![Platform](https://img.shields.io/badge/platform-ios-red.svg)](https://github.com/micyo202/YZFrame)
-[![Support](https://img.shields.io/badge/support-iOS 10+-blue.svg)](https://www.apple.com/nl/ios)
+[![Support](https://img.shields.io/badge/support-iOS10+-blue.svg)](https://www.apple.com/nl/ios)
 [![License MIT](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://github.com/micyo202/YZFrame/blob/master/LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/micyo202/YZFrame.svg?style=social&label=Stars)](https://github.com/micyo202/YZFrame)
 [![GitHub forks](https://img.shields.io/github/forks/micyo202/YZFrame.svg?style=social&label=Fork)](https://github.com/micyo202/YZFrame)
