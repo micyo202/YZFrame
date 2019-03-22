@@ -24,4 +24,4 @@ before_install:
 
 script:
     - set -o pipefail
-    - xcodebuild clean build -workspace YZFrame.xcworkspace -scheme 'YZFrame' | xcpretty
+    - xcodebuild clean build -workspace YZFrame.xcworkspace -scheme 'YZFrame iOS' -sdk iphonesimulator PLATFORM_NAME=iphonesimulator -configuration Debug | xcpretty -c
