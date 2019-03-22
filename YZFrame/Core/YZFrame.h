@@ -29,6 +29,8 @@
 #import "YZVerify.h"
 #import "YZAuthID.h"
 #import "YZPermission.h"
+#import "YZLocationConverterUtil.h"
+#import "YZIPAddressUtil.h"
 
 /*
 #import <YYKit/YYKit.h>
