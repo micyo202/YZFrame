@@ -21,3 +21,7 @@ before_install:
     - xcpretty --version
     - xcodebuild -version
     - xcodebuild -showsdks
+
+script:
+    - set -o pipefail
+
