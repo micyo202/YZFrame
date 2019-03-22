@@ -38,7 +38,6 @@
 #endif
 
 #pragma mark - 单例模式方法
-#pragma mark - 单例模式方法
 #define SingletonH(name) + (instancetype)shared##name;
 
 #define SingletonM(name) \
