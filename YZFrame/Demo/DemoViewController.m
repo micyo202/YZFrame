@@ -113,7 +113,9 @@ static NSString *const cellReuseIdentifier = @"cellReuseIdentifier";
                   @{@"code" : @"14", @"name" : @"YZPermission权限访问"},
                   @{@"code" : @"15", @"name" : @"YZJsonUtil转换"},
                   @{@"code" : @"16", @"name" : @"YZSandBoxUtil存储读取"},
-                  @{@"code" : @"17", @"name" : @"YZVerify校验方法"}
+                  @{@"code" : @"17", @"name" : @"YZVerify校验方法"},
+                  @{@"code" : @"18", @"name" : @"YZLocationConverterUtil经纬度转换"},
+                  @{@"code" : @"19", @"name" : @"YZIPAddressUtil获取IP地址"}
                   ];
     }
     return _data;
@@ -305,6 +307,16 @@ static NSString *const cellReuseIdentifier = @"cellReuseIdentifier";
     }
     if(17 == code){
         NSLog(@"%@", [YZVerify checkEmoji:@"嘻嘻☺️哈哈"] ? @"包含表情返回YES" : @"没有表情返回NO");
+    }
+    if(18 == code){
+        CLLocationCoordinate2D locationCoordinate2D = CLLocationCoordinate2DMake(34.229047, 108.953198);
+        NSLog(@"bd09: latitude=%f, longitude=%f", locationCoordinate2D.latitude, locationCoordinate2D.longitude);
+        CLLocationCoordinate2D coverterLocationCoordinate2D = [YZLocationConverterUtil bd09ToGcj02:locationCoordinate2D];
+        NSLog(@"gcj02: latitude=%f, longitude=%f", coverterLocationCoordinate2D.latitude, coverterLocationCoordinate2D.longitude);
+    }
+    if(19 == code){
+        YZIPAddressUtil *ipUtil = [[YZIPAddressUtil alloc] init];
+        NSLog(@"IP地址为%@", [ipUtil getIPAddress:YES]);
     }
 }
 
