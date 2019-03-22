@@ -1,7 +1,23 @@
 language: objective-c
 osx_image: xcode10
+sudo: false
 
-xcode_workspace: YZFrame/YZFrame.xcworkspace
-xcode_schemes: YZFrame
+env:
+  global:
+  - LC_CTYPE=en_US.UTF-8
+  - LANG=en_US.UTF-8
 
-profile: YZFrame/Podfile
+notifications:
+  email: false
+
+before_install:
+    - env
+    - locale
+    - gem install cocoapods --no-rdoc --no-ri --no-document --quiet
+    - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
+    - pod --version
+    - pod setup --silent > /dev/null
+    - pod repo update --silent
+    - xcpretty --version
+    - xcodebuild -version
+    - xcodebuild -showsdks
