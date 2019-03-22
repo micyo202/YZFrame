@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1857464921C13FBC002FA3C1 /* YZLocationConverterUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 1857464821C13FBC002FA3C1 /* YZLocationConverterUtil.m */; };
+		18676B2922447601006FE472 /* YZIPAddressUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 18676B2822447601006FE472 /* YZIPAddressUtil.m */; };
 		4E27E9850FE6E6B22312E83F /* libPods-YZFrame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF8C0672294CBD78ABF6DE2A /* libPods-YZFrame.a */; };
 		AB5C6FC42189AD0E002DC392 /* AppDelegate+AppService.m in Sources */ = {isa = PBXBuildFile; fileRef = AB5C6FC32189AD0E002DC392 /* AppDelegate+AppService.m */; };
 		AB5C6FC7218AC845002DC392 /* DemoComponentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB5C6FC6218AC845002DC392 /* DemoComponentViewController.m */; };
@@ -39,6 +41,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1857464721C13FBC002FA3C1 /* YZLocationConverterUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZLocationConverterUtil.h; sourceTree = "<group>"; };
+		1857464821C13FBC002FA3C1 /* YZLocationConverterUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZLocationConverterUtil.m; sourceTree = "<group>"; };
+		18676B2722447601006FE472 /* YZIPAddressUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZIPAddressUtil.h; sourceTree = "<group>"; };
+		18676B2822447601006FE472 /* YZIPAddressUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZIPAddressUtil.m; sourceTree = "<group>"; };
 		1FAFFC79F5EA0896868C120F /* Pods-YZFrame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YZFrame.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YZFrame/Pods-YZFrame.debug.xcconfig"; sourceTree = "<group>"; };
 		5668B913F8F8D99EB9F5CD35 /* Pods-YZFrame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YZFrame.release.xcconfig"; path = "Pods/Target Support Files/Pods-YZFrame/Pods-YZFrame.release.xcconfig"; sourceTree = "<group>"; };
 		AB5C6FC22189AD0E002DC392 /* AppDelegate+AppService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+AppService.h"; sourceTree = "<group>"; };
@@ -285,6 +291,10 @@
 				ABFF485D218304DD003C2A6E /* YZJsonUtil.m */,
 				ABFF485F21830654003C2A6E /* YZSandBoxUtil.h */,
 				ABFF486021830654003C2A6E /* YZSandBoxUtil.m */,
+				1857464721C13FBC002FA3C1 /* YZLocationConverterUtil.h */,
+				1857464821C13FBC002FA3C1 /* YZLocationConverterUtil.m */,
+				18676B2722447601006FE472 /* YZIPAddressUtil.h */,
+				18676B2822447601006FE472 /* YZIPAddressUtil.m */,
 			);
 			path = YZUtils;
 			sourceTree = "<group>";
@@ -476,6 +486,7 @@
 				ABFF486A21830881003C2A6E /* YZBase64.m in Sources */,
 				ABA68DE92191801C00DA854F /* YZVerify.m in Sources */,
 				ABFF484E2182DDB7003C2A6E /* NSString+YZDate.m in Sources */,
+				1857464921C13FBC002FA3C1 /* YZLocationConverterUtil.m in Sources */,
 				ABFF486D21830892003C2A6E /* YZMD5.m in Sources */,
 				ABFF487C218310C2003C2A6E /* YZHandle.m in Sources */,
 				ABFF484B2182DDB7003C2A6E /* UIButton+YZ.m in Sources */,
@@ -488,6 +499,7 @@
 				ABFF48592182EFCB003C2A6E /* YZDeviceModel.m in Sources */,
 				ABFF48502182DDB7003C2A6E /* UIDevice+YZ.m in Sources */,
 				ABFF48262182CD07003C2A6E /* main.m in Sources */,
+				18676B2922447601006FE472 /* YZIPAddressUtil.m in Sources */,
 				AB5C6FC7218AC845002DC392 /* DemoComponentViewController.m in Sources */,
 				ABFF486721830865003C2A6E /* YZRSA.m in Sources */,
 				ABFF48182182CCF6003C2A6E /* AppDelegate.m in Sources */,
