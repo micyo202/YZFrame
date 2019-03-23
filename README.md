@@ -1,7 +1,7 @@
 # YZFrame
 
 [![Build Status](https://travis-ci.org/micyo202/YZFrame.svg)](https://travis-ci.org/micyo202/YZFrame)
-[![Version](https://img.shields.io/badge/version-1.0.0-yellow.svg)](https://github.com/micyo202/YZFrame)
+[![Version](https://img.shields.io/badge/version-1.0.2-yellow.svg)](https://github.com/micyo202/YZFrame)
 [![Cocoapods](https://img.shields.io/badge/pod-v1.5.3-green.svg)](https://cocoapods.org/?q=YZFrame)
 [![Platform](https://img.shields.io/badge/platform-ios-red.svg)](https://github.com/micyo202/YZFrame)
 [![Support](https://img.shields.io/badge/support-iOS10+-blue.svg)](https://www.apple.com/nl/ios)
