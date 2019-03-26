@@ -51,4 +51,31 @@
     return RgbColor(r, g, b, alpha);
 }
 
+#pragma mark - 绘制渐变颜色
++ (CAGradientLayer *)setGradualChangingColor:(UIView *)view fromColor:(NSString *)fromHexColorStr toColor:(NSString *)toHexColorStr gradientType:(GradientType)gradientType {
+    
+    // CAGradientLayer类对其绘制渐变背景颜色、填充层的形状(包括圆角)
+    CAGradientLayer *gradientLayer = [CAGradientLayer layer];
+    gradientLayer.frame = view.bounds;
+    
+    // 创建渐变色数组，需要转换为CGColor颜色
+    gradientLayer.colors = @[(__bridge id)HexColor(fromHexColorStr, 1.f).CGColor,(__bridge id)HexColor(toHexColorStr, 1.f).CGColor];
+    
+    if(GradientFromLeftToRight == gradientType){    // 渐变色从做往右
+        // 设置渐变颜色方向，左上点为(0,0), 右下点为(1,1)，(0, 0)~(1, 0)表示水平渐变
+        gradientLayer.startPoint = CGPointMake(0, 0);
+        gradientLayer.endPoint = CGPointMake(1, 0);
+    }
+    if(GradientFromTopToBottom == gradientType){    // 渐变色从上往下
+        // 设置渐变颜色方向，左上点为(0,0), 右下点为(1,1)，(0, 0)~(, 1)表示竖直渐变
+        gradientLayer.startPoint = CGPointMake(0, 0);
+        gradientLayer.endPoint = CGPointMake(0, 1);
+    }
+    
+    // 设置颜色变化点，取值范围 0.0~1.0
+    gradientLayer.locations = @[@0, @1];
+    
+    return gradientLayer;
+}
+
 @end

@@ -10,9 +10,18 @@
 
 #import <UIKit/UIKit.h>
 
+// 渐变色方式
+typedef NS_ENUM(NSInteger, GradientType) {
+    GradientFromTopToBottom,    // 从上到下
+    GradientFromLeftToRight     // 从左到右
+};
+
 @interface UIColor (YZ)
 
 // 根据16进制颜色代码生成颜色
 + (UIColor *)colorWithHexString:(NSString *)color alpha:(CGFloat)alpha;
+
+// 绘制渐变颜色
++ (CAGradientLayer *)setGradualChangingColor:(UIView *)view fromColor:(NSString *)fromHexColorStr toColor:(NSString *)toHexColorStr gradientType:(GradientType)gradientType;
 
 @end
