@@ -177,6 +177,17 @@
     return NO;
 }
 
++ (BOOL)checkNumber:(NSString *)number minLen:(NSInteger)minLen maxLen:(NSInteger)maxLen {
+    NSString *pattern = @"^[0-9]*$";
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", pattern];
+    if([predicate evaluateWithObject:number]){
+        if(number.length >= minLen && number.length <= maxLen){
+            return YES;
+        }
+    }
+    return NO;
+}
+
 + (BOOL)checkEmoji:(NSString *)string {
     __block BOOL returnValue = NO;
     [string enumerateSubstringsInRange:NSMakeRange(0, string.length) options:NSStringEnumerationByComposedCharacterSequences usingBlock:^(NSString * _Nullable substring, NSRange substringRange, NSRange enclosingRange, BOOL * _Nonnull stop) {

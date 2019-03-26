@@ -23,6 +23,7 @@
 + (BOOL)checkAmount:(NSString *)amount multi:(NSInteger)multi;                  // 验证金额是否指定的倍数
 + (BOOL)checkAmount:(NSString *)amount min:(float)min max:(float)max;           // 验证金额，不得超过最大值
 + (BOOL)checkLength:(NSString *)string min:(NSInteger)min max:(NSInteger)max;   // 验证长度返回
++ (BOOL)checkNumber:(NSString *)number minLen:(NSInteger)minLen maxLen:(NSInteger)maxLen; // 验证是否为数字做长度效验
 + (BOOL)checkEmoji:(NSString *)string;                                          // 验证字符中是否有Emoji
 
 @end
