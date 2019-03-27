@@ -9,16 +9,16 @@
 [![GitHub stars](https://img.shields.io/github/stars/micyo202/YZFrame.svg?style=social&label=Stars)](https://github.com/micyo202/YZFrame)
 [![GitHub forks](https://img.shields.io/github/forks/micyo202/YZFrame.svg?style=social&label=Fork)](https://github.com/micyo202/YZFrame)
 
-iOS快速开发类库，集成一系列常用类库、封装相关方法，便于项目中使用，快速开发。
+iOS敏捷开发类库，集成并封装一系列常用类库方法，避免重复发明轮子，提高开发效率。
 
 ### 导入工程
-使用CocoaPods方式：pod 'YZFrame'
+使用CocoaPods方式：`pod 'YZFrame'`
 
-在使用的地方导入头文件：#import "YZFrame.h"
+在使用的地方导入头文件：`#import "YZFrame.h"`即可
 
-### 相关说明
-本类库中所有对象均已**YZ**开头，包含：
+⚠️*注：YZFrame中已包含YYKit、MBProgressHUD*
 
+### 项目结构
 ```lua
 YZFrame
 ├── YZVerify-- 各种效验规则
@@ -45,7 +45,7 @@ YZFrame
 ├── YZView-- 视图扩展属性
 ```
 
-注：相关使用方法请参考项目中Demo模块
+⚠️注：详细使用方法请参考项目中Demo模块
 
 ### Demo包含以下相关代码：
 * AvoidCrash防止 NSArray、NSDictionary 崩溃闪退
