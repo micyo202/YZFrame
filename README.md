@@ -1,7 +1,7 @@
 # YZFrame
 
 [![Build Status](https://travis-ci.org/micyo202/YZFrame.svg)](https://travis-ci.org/micyo202/YZFrame)
-[![Version](https://img.shields.io/badge/version-1.0.5-yellow.svg)](https://github.com/micyo202/YZFrame)
+[![Version](https://img.shields.io/badge/version-1.0.6-yellow.svg)](https://github.com/micyo202/YZFrame)
 [![Cocoapods](https://img.shields.io/badge/pod-v1.5.3-green.svg)](https://cocoapods.org/?q=YZFrame)
 [![Platform](https://img.shields.io/badge/platform-ios-red.svg)](https://github.com/micyo202/YZFrame)
 [![Support](https://img.shields.io/badge/support-iOS10+-blue.svg)](https://www.apple.com/nl/ios)
@@ -38,11 +38,13 @@ YZFrame
 |    ├── YZLocationConverterUtil-- 经纬度相关坐标转换
 |    ├── YZIPAddressUtil-- 获取IP地址
 ├── YZAuthID-- 指纹、面容识别方法
-├── YZButton-- 防重点击按钮
+├── YZButton-- 防重点击按钮、自定义标题图标按钮
 ├── YZColor-- 自定义颜色
 ├── YZDate-- 各种格式日期转换
 ├── YZDevice-- 获取设备信息
 ├── YZView-- 视图扩展属性
+├── YZRoundedBorder-- 自定义可变的圆角和边框，某个角，多个角视图/标签
+├── YZFPSLabel-- 监测FPS工具标签
 ```
 
 ⚠️注：详细使用方法请参考项目中Demo模块
