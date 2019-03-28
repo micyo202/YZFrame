@@ -1,12 +1,16 @@
-/************************************************************
- Class    : YZFrame.h
- Describe : YZ敏捷开发类库
- Company  : Micyo
- Author   : Yanzheng
- Date     : 2018-10-26
- Version  : 1.0
- Declare  : Copyright © 2018 Yanzheng. All rights reserved.
- ************************************************************/
+//
+//  YZFrame.h
+//  YZFrame <https://github.com/micyo202/YZFrame>
+//
+//  Created by Yanzheng on 2018-10-26.
+//  Copyright © 2018 Yanzheng. All rights reserved.
+//
+//  Version 1.0.6
+//
+//  This source code is licensed under the MIT-style license found in the
+//  LICENSE file in the root directory of this source tree.
+//  http://opensource.org/licenses/MIT
+//
 
 #ifndef YZFrame_h
 #define YZFrame_h

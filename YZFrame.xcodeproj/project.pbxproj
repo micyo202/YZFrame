@@ -485,17 +485,16 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-YZFrame/Pods-YZFrame-resources.sh",
-				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YZFrame/Pods-YZFrame-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YZFrame/Pods-YZFrame-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YZFrame/Pods-YZFrame-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YZFrame/Pods-YZFrame-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		59CCD00005152694BFB0E37F /* [CP] Check Pods Manifest.lock */ = {
