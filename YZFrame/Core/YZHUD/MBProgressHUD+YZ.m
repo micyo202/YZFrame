@@ -13,7 +13,7 @@
 #import "YZUtilsMarcos.h"
 #import "YZHandle.h"
 
-#import "YYKit/YYKit.h"
+#import <YYKit/YYKit.h>
 
 @implementation MBProgressHUD (YZ)
 

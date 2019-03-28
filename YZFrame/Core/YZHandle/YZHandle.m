@@ -63,6 +63,8 @@
 
 #pragma mark - 将字符串指定位置隐藏为*
 + (NSString *)hideStr:(NSString *)str range:(NSRange)range {
+    if(nil == str || str.length < 2)
+        return @"";
     NSMutableString *mutableStr = [NSMutableString stringWithString:str];
     NSString *replaceStr = @"*";
     for(int i = 1; i < range.length; i++){
@@ -125,10 +127,12 @@
     if (chineseStr.length){
         NSMutableString *pinYin = [[NSMutableString alloc] initWithString:chineseStr];
         // 先转换为带声调的拼音
-        CFStringTransform((__bridge CFMutableStringRef)pinYin, 0, kCFStringTransformMandarinLatin, NO);
-        
+        if (CFStringTransform((__bridge CFMutableStringRef)pinYin, 0, kCFStringTransformMandarinLatin, NO)) {
+            DLog(@"pinYin: %@", pinYin);
+        }
         // 再转换为不带声调的拼音
         if (CFStringTransform((__bridge CFMutableStringRef)pinYin, 0, kCFStringTransformStripDiacritics, NO)) {
+            DLog(@"pinYin: %@", pinYin);
             // 再去除空格，将拼音连在一起
             NSString *pinYinStr = [NSString stringWithString:pinYin];
             // 去除掉首尾的空白字符和换行字符
@@ -140,6 +144,7 @@
             for(NSString *pinYin in array){
                 firstPinYinStr = [firstPinYinStr stringByAppendingFormat:@"%@", [pinYin substringToIndex:1]];
             }
+            DLog(@"firstPinYinStr: %@", firstPinYinStr);
             
             // 去除掉其它位置的空白字符
             //pinYinStr = [pinYinStr stringByReplacingOccurrencesOfString:@" " withString:@""];

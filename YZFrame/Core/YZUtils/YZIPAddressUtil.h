@@ -10,7 +10,7 @@
 
 #import <Foundation/Foundation.h>
 
-//首先导入头文件信息
+// 首先导入头文件信息
 #import <ifaddrs.h>
 #import <arpa/inet.h>
 #import <net/if.h>
