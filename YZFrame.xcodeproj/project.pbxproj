@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		181920B2224C6020003F32C3 /* YZIconTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 181920B1224C6020003F32C3 /* YZIconTitleButton.m */; };
+		181920B5224C60BF003F32C3 /* YZRoundedBorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 181920B4224C60BF003F32C3 /* YZRoundedBorderView.m */; };
+		181920B9224C616E003F32C3 /* YZFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 181920B8224C616E003F32C3 /* YZFPSLabel.m */; };
+		181920BC224C6D29003F32C3 /* YZRoundedBorderLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 181920BB224C6D29003F32C3 /* YZRoundedBorderLabel.m */; };
+		181920BF224C6E85003F32C3 /* DemoRoundedBorderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181920BE224C6E85003F32C3 /* DemoRoundedBorderViewController.m */; };
 		1857464921C13FBC002FA3C1 /* YZLocationConverterUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 1857464821C13FBC002FA3C1 /* YZLocationConverterUtil.m */; };
 		18676B2922447601006FE472 /* YZIPAddressUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 18676B2822447601006FE472 /* YZIPAddressUtil.m */; };
 		4E27E9850FE6E6B22312E83F /* libPods-YZFrame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF8C0672294CBD78ABF6DE2A /* libPods-YZFrame.a */; };
@@ -41,6 +46,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		181920B0224C6020003F32C3 /* YZIconTitleButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZIconTitleButton.h; sourceTree = "<group>"; };
+		181920B1224C6020003F32C3 /* YZIconTitleButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZIconTitleButton.m; sourceTree = "<group>"; };
+		181920B3224C60BF003F32C3 /* YZRoundedBorderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZRoundedBorderView.h; sourceTree = "<group>"; };
+		181920B4224C60BF003F32C3 /* YZRoundedBorderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZRoundedBorderView.m; sourceTree = "<group>"; };
+		181920B7224C616E003F32C3 /* YZFPSLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZFPSLabel.h; sourceTree = "<group>"; };
+		181920B8224C616E003F32C3 /* YZFPSLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZFPSLabel.m; sourceTree = "<group>"; };
+		181920BA224C6D29003F32C3 /* YZRoundedBorderLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZRoundedBorderLabel.h; sourceTree = "<group>"; };
+		181920BB224C6D29003F32C3 /* YZRoundedBorderLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZRoundedBorderLabel.m; sourceTree = "<group>"; };
+		181920BD224C6E85003F32C3 /* DemoRoundedBorderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoRoundedBorderViewController.h; sourceTree = "<group>"; };
+		181920BE224C6E85003F32C3 /* DemoRoundedBorderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoRoundedBorderViewController.m; sourceTree = "<group>"; };
 		1857464721C13FBC002FA3C1 /* YZLocationConverterUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZLocationConverterUtil.h; sourceTree = "<group>"; };
 		1857464821C13FBC002FA3C1 /* YZLocationConverterUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZLocationConverterUtil.m; sourceTree = "<group>"; };
 		18676B2722447601006FE472 /* YZIPAddressUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZIPAddressUtil.h; sourceTree = "<group>"; };
@@ -131,6 +146,26 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		181920C0224C756D003F32C3 /* YZFPSLabel */ = {
+			isa = PBXGroup;
+			children = (
+				181920B7224C616E003F32C3 /* YZFPSLabel.h */,
+				181920B8224C616E003F32C3 /* YZFPSLabel.m */,
+			);
+			path = YZFPSLabel;
+			sourceTree = "<group>";
+		};
+		181920C4224C75A0003F32C3 /* YZRoundedBorder */ = {
+			isa = PBXGroup;
+			children = (
+				181920BA224C6D29003F32C3 /* YZRoundedBorderLabel.h */,
+				181920BB224C6D29003F32C3 /* YZRoundedBorderLabel.m */,
+				181920B3224C60BF003F32C3 /* YZRoundedBorderView.h */,
+				181920B4224C60BF003F32C3 /* YZRoundedBorderView.m */,
+			);
+			path = YZRoundedBorder;
+			sourceTree = "<group>";
+		};
 		ABA68DE621917FEE00DA854F /* YZVerify */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,6 +230,8 @@
 		ABFF482F2182DD6B003C2A6E /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				181920C4224C75A0003F32C3 /* YZRoundedBorder */,
+				181920C0224C756D003F32C3 /* YZFPSLabel */,
 				ABA68DE621917FEE00DA854F /* YZVerify */,
 				ABFF487D218313A7003C2A6E /* YZPermission */,
 				ABFF487921831098003C2A6E /* YZHandle */,
@@ -218,6 +255,8 @@
 			children = (
 				ABFF48322182DDB6003C2A6E /* UIButton+YZ.h */,
 				ABFF48312182DDB6003C2A6E /* UIButton+YZ.m */,
+				181920B0224C6020003F32C3 /* YZIconTitleButton.h */,
+				181920B1224C6020003F32C3 /* YZIconTitleButton.m */,
 			);
 			path = YZButton;
 			sourceTree = "<group>";
@@ -359,6 +398,8 @@
 				AB94225D2188526D00725D77 /* DemoViewController.m */,
 				AB5C6FC5218AC845002DC392 /* DemoComponentViewController.h */,
 				AB5C6FC6218AC845002DC392 /* DemoComponentViewController.m */,
+				181920BD224C6E85003F32C3 /* DemoRoundedBorderViewController.h */,
+				181920BE224C6E85003F32C3 /* DemoRoundedBorderViewController.m */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -490,13 +531,18 @@
 				ABFF486D21830892003C2A6E /* YZMD5.m in Sources */,
 				ABFF487C218310C2003C2A6E /* YZHandle.m in Sources */,
 				ABFF484B2182DDB7003C2A6E /* UIButton+YZ.m in Sources */,
+				181920B2224C6020003F32C3 /* YZIconTitleButton.m in Sources */,
 				ABFF484D2182DDB7003C2A6E /* NSDate+YZDate.m in Sources */,
+				181920B5224C60BF003F32C3 /* YZRoundedBorderView.m in Sources */,
 				ABFF4880218313C4003C2A6E /* YZPermission.m in Sources */,
 				ABFF484C2182DDB7003C2A6E /* NSDateComponents+YZDate.m in Sources */,
+				181920BF224C6E85003F32C3 /* DemoRoundedBorderViewController.m in Sources */,
 				ABFF485E218304DD003C2A6E /* YZJsonUtil.m in Sources */,
 				ABFF4870218308A0003C2A6E /* YZAES.m in Sources */,
 				ABFF484F2182DDB7003C2A6E /* UIView+YZ.m in Sources */,
 				ABFF48592182EFCB003C2A6E /* YZDeviceModel.m in Sources */,
+				181920BC224C6D29003F32C3 /* YZRoundedBorderLabel.m in Sources */,
+				181920B9224C616E003F32C3 /* YZFPSLabel.m in Sources */,
 				ABFF48502182DDB7003C2A6E /* UIDevice+YZ.m in Sources */,
 				ABFF48262182CD07003C2A6E /* main.m in Sources */,
 				18676B2922447601006FE472 /* YZIPAddressUtil.m in Sources */,
