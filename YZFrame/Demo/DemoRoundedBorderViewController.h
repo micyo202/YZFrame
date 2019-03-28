@@ -1,10 +1,12 @@
-//
-//  DemoRoundedBorderViewController.h
-//  YZFrame
-//
-//  Created by apple on 2019/3/28.
-//  Copyright © 2019 Yanzheng. All rights reserved.
-//
+/************************************************************
+ Class    : DemoRoundedBorderViewController.h
+ Describe : 圆角视图标签示例代码
+ Company  : Micyo
+ Author   : Yanzheng
+ Date     : 2019-03-28
+ Version  : 1.0
+ Declare  : Copyright © 2019 Yanzheng. All rights reserved.
+ ************************************************************/
 
 #import <UIKit/UIKit.h>
 

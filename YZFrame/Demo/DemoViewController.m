@@ -10,7 +10,6 @@
 
 #import "DemoViewController.h"
 
-#import <YYKit/YYKit.h>
 //#import <AFNetworking/AFNetworking.h>
 //#import <SDWebImage/UIImageView+WebCache.h>
 #import <UIAlertController+Blocks/UIAlertController+Blocks.h>
@@ -20,7 +19,6 @@
 #import <YBPopupMenu/YBPopupMenu.h>
 #import <JDStatusBarNotification/JDStatusBarNotification.h>
 #import <MJRefresh/MJRefresh.h>
-#import <SDCycleScrollView/SDCycleScrollView.h>
 
 #import "YZFrame.h"
 
@@ -115,7 +113,8 @@ static NSString *const cellReuseIdentifier = @"cellReuseIdentifier";
                   @{@"code" : @"16", @"name" : @"YZSandBoxUtil存储读取"},
                   @{@"code" : @"17", @"name" : @"YZVerify校验方法"},
                   @{@"code" : @"18", @"name" : @"YZLocationConverterUtil经纬度转换"},
-                  @{@"code" : @"19", @"name" : @"YZIPAddressUtil获取IP地址"}
+                  @{@"code" : @"19", @"name" : @"YZIPAddressUtil获取IP地址"},
+                  @{@"code" : @"20", @"name" : @"YZRoundedBorder自定义多圆角视图标签"}
                   ];
     }
     return _data;
@@ -317,6 +316,9 @@ static NSString *const cellReuseIdentifier = @"cellReuseIdentifier";
     if(19 == code){
         YZIPAddressUtil *ipUtil = [[YZIPAddressUtil alloc] init];
         NSLog(@"IP地址为%@", [ipUtil getIPAddress:YES]);
+    }
+    if(20 == code){
+        [self presentViewController:[[NSClassFromString(@"DemoRoundedBorderViewController") alloc] init] animated:YES completion:nil];
     }
 }
 
