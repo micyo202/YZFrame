@@ -1,16 +1,16 @@
-//
-//  AppDelegate.m
-//  YZFrame
-//
-//  Created by cycfc on 2018/10/26.
-//  Copyright © 2018年 Yanzheng. All rights reserved.
-//
+/************************************************************
+ Class    : AppDelegate.m
+ Describe : 主代理类
+ Company  : Micyo
+ Author   : Yanzheng
+ Date     : 2018-10-26
+ Version  : 1.0
+ Declare  : Copyright © 2018 Yanzheng. All rights reserved.
+ ************************************************************/
 
 #import "AppDelegate.h"
-
 #import "AppDelegate+AppService.h"
 
-#import "YZScreenMarcos.h"
 #import "DemoViewController.h"
 
 @interface AppDelegate ()
@@ -24,12 +24,13 @@
     // Override point for customization after application launch.
     
     DemoViewController *demoVC = [[DemoViewController alloc] init];
-    self.window = [[UIWindow alloc] initWithFrame:FRAME_SCREEN];
+    self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
     self.window.backgroundColor = UIColor.clearColor;
     self.window.rootViewController = demoVC;
     [self.window makeKeyAndVisible];
     
     [self initializeAvoidCrash];    // 防止崩溃
+    [self initializeFPS];           // 监测FPS
     
     return YES;
 }
