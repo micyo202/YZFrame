@@ -9,7 +9,7 @@
  ************************************************************/
 
 #import "YZFPSLabel.h"
-#import <YYKit.h>
+#import <YYKit/YYKit.h>
 
 #define kSize CGSizeMake(55, 20)
 

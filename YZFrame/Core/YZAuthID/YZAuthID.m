@@ -9,8 +9,9 @@
  ************************************************************/
 
 #import "YZAuthID.h"
-#import <UIKit/UIKit.h>
 #import "YZScreenMarcos.h"
+
+#import <UIKit/UIKit.h>
 
 @implementation YZAuthID
 
