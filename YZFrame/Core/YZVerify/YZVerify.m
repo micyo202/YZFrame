@@ -19,13 +19,13 @@
 }
 
 + (BOOL)checkMobileNumber:(NSString *)number {
-    NSString *pattern = @"1[345789]([0-9]){9}";
+    NSString *pattern = @"1[3456789]([0-9]){9}";
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", pattern];
     return [predicate evaluateWithObject:number];
 }
 
 + (BOOL)checkPhoneNumber:(NSString *)number {
-    NSString *pattern = @"^((0\\d{2,3}\\d{7,8})|(\\d{7,8})|(1[345789]\\d{9}))$";
+    NSString *pattern = @"^((0\\d{2,3}\\d{7,8})|(\\d{7,8})|(1[3456789]\\d{9}))$";
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", pattern];
     return [predicate evaluateWithObject:number];
 }
