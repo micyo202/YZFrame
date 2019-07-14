@@ -1,6 +1,6 @@
 /************************************************************
  Class    : DemoViewController.m
- Describe : 实例代码
+ Describe : 示例代码
  Company  : Micyo
  Author   : Yanzheng
  Date     : 2018-10-30
@@ -114,7 +114,9 @@ static NSString *const cellReuseIdentifier = @"cellReuseIdentifier";
                   @{@"code" : @"17", @"name" : @"YZVerify校验方法"},
                   @{@"code" : @"18", @"name" : @"YZLocationConverterUtil经纬度转换"},
                   @{@"code" : @"19", @"name" : @"YZIPAddressUtil获取IP地址"},
-                  @{@"code" : @"20", @"name" : @"YZRoundedBorder自定义多圆角视图标签"}
+                  @{@"code" : @"20", @"name" : @"YZRoundedBorder自定义多圆角视图标签"},
+                  @{@"code" : @"21", @"name" : @"YZUserDefaule存储读取"},
+                  @{@"code" : @"22", @"name" : @"YZDate日期类型格式转换"}
                   ];
     }
     return _data;
@@ -319,6 +321,28 @@ static NSString *const cellReuseIdentifier = @"cellReuseIdentifier";
     }
     if(20 == code){
         [self presentViewController:[[NSClassFromString(@"DemoRoundedBorderViewController") alloc] init] animated:YES completion:nil];
+    }
+    if(21 == code){
+        [YZUserDefault saveUserDefaultObject:@{@"username" : @"Micyo", @"password" : @"123456"} key:@"UserInfo"];
+        NSDictionary *userInfo = [YZUserDefault getUserDefaultObjectByKey:@"UserInfo"];
+        DLog(@"%@", userInfo);
+        [YZUserDefault removeObjectWithKey:@"UserInfo"];
+        NSDictionary *userInfoAfter = [YZUserDefault getUserDefaultObjectByKey:@"UserInfo"];
+        DLog(@"%@", userInfoAfter);
+    }
+    if(22 == code){
+        NSDate *now = [NSDate date];
+        NSString *timestamp = [NSString stringWithFormat:@"%ld", (long)[now timeIntervalSince1970]];
+        DLog(@"%@", timestamp);
+        DLog(@"%ld", [now year]);
+        DLog(@"%ld", [now month]);
+        DLog(@"%ld", [now day]);
+        DLog(@"%ld", [now hour]);
+        DLog(@"%ld", [now minute]);
+        DLog(@"%ld", [now seconds]);
+        DLog(@"%ld", [now weekday]);
+        
+        DLog(@"%@", [NSDate yz_dateWithFormat_yyyy_MM_string:@"2019-07-14 20:19:00"]);
     }
 }
 

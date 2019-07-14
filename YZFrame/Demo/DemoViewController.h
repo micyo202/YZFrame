@@ -1,6 +1,6 @@
 /************************************************************
  Class    : DemoViewController.h
- Describe : 实例代码
+ Describe : 示例代码
  Company  : Micyo
  Author   : Yanzheng
  Date     : 2018-10-30
