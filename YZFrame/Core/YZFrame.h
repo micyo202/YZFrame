@@ -5,8 +5,8 @@
 //  Created by Yanzheng on 2018-10-26.
 //  Copyright © 2018 Yanzheng. All rights reserved.
 //
-//  Version 1.0.7
-//  Modify 2019-05-08
+//  Version 1.2.0
+//  Modify 2019-07-16
 //
 //  This source code is licensed under the MIT-style license found in the
 //  LICENSE file in the root directory of this source tree.
@@ -37,6 +37,7 @@
 #pragma mark - 自定义工具类
 #import "YZJsonUtil.h"
 #import "YZSandBoxUtil.h"
+#import "YZUserDefault.h"
 #import "YZHandle.h"
 #import "YZEncrypt.h"
 #import "YZDate.h"
