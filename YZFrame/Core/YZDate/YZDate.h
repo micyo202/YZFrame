@@ -11,6 +11,7 @@
 #ifndef YZDate_h
 #define YZDate_h
 
+#import "NSDate+YZDate.h"
 #import "NSString+YZDate.h"
 
 #endif /* YZDate_h */
