@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1809517922DB0E2A00453669 /* YZUserDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = 1809517822DB0E2A00453669 /* YZUserDefault.m */; };
 		181920B2224C6020003F32C3 /* YZIconTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 181920B1224C6020003F32C3 /* YZIconTitleButton.m */; };
 		181920B5224C60BF003F32C3 /* YZRoundedBorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 181920B4224C60BF003F32C3 /* YZRoundedBorderView.m */; };
 		181920B9224C616E003F32C3 /* YZFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 181920B8224C616E003F32C3 /* YZFPSLabel.m */; };
@@ -46,6 +47,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1809517722DB0E2A00453669 /* YZUserDefault.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZUserDefault.h; sourceTree = "<group>"; };
+		1809517822DB0E2A00453669 /* YZUserDefault.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZUserDefault.m; sourceTree = "<group>"; };
 		181920B0224C6020003F32C3 /* YZIconTitleButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZIconTitleButton.h; sourceTree = "<group>"; };
 		181920B1224C6020003F32C3 /* YZIconTitleButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZIconTitleButton.m; sourceTree = "<group>"; };
 		181920B3224C60BF003F32C3 /* YZRoundedBorderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZRoundedBorderView.h; sourceTree = "<group>"; };
@@ -334,6 +337,8 @@
 				1857464821C13FBC002FA3C1 /* YZLocationConverterUtil.m */,
 				18676B2722447601006FE472 /* YZIPAddressUtil.h */,
 				18676B2822447601006FE472 /* YZIPAddressUtil.m */,
+				1809517722DB0E2A00453669 /* YZUserDefault.h */,
+				1809517822DB0E2A00453669 /* YZUserDefault.m */,
 			);
 			path = YZUtils;
 			sourceTree = "<group>";
@@ -424,6 +429,7 @@
 				ABFF48102182CCF6003C2A6E /* Frameworks */,
 				ABFF48112182CCF6003C2A6E /* Resources */,
 				15A9F547949282A98206D79D /* [CP] Copy Pods Resources */,
+				1809517A22DB2E9400453669 /* Build Number */,
 			);
 			buildRules = (
 			);
@@ -495,6 +501,24 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YZFrame/Pods-YZFrame-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		1809517A22DB2E9400453669 /* Build Number */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Build Number";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo $CONFIGURATION\n\n# Debug Release\nif [ \"Debug\" == \"${CONFIGURATION}\" ]\n\nthen\n\nbuildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${INFOPLIST_FILE}\")\n\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${INFOPLIST_FILE}\"\n\necho \"Build Number Increase\"\n\nfi\n";
+		};
 		59CCD00005152694BFB0E37F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -547,6 +571,7 @@
 				ABFF486721830865003C2A6E /* YZRSA.m in Sources */,
 				ABFF48182182CCF6003C2A6E /* AppDelegate.m in Sources */,
 				ABFF487521830D77003C2A6E /* MBProgressHUD+YZ.m in Sources */,
+				1809517922DB0E2A00453669 /* YZUserDefault.m in Sources */,
 				AB5C6FC42189AD0E002DC392 /* AppDelegate+AppService.m in Sources */,
 				ABFF48642183084A003C2A6E /* YZSalt.m in Sources */,
 				ABFF48512182DDB7003C2A6E /* YZAuthID.m in Sources */,
