@@ -1,7 +1,7 @@
 # YZFrame
 
 [![Build Status](https://travis-ci.org/micyo202/YZFrame.svg)](https://travis-ci.org/micyo202/YZFrame)
-[![Version](https://img.shields.io/badge/version-1.0.7-yellow.svg)](https://github.com/micyo202/YZFrame)
+[![Version](https://img.shields.io/badge/version-1.2.0-yellow.svg)](https://github.com/micyo202/YZFrame)
 [![Cocoapods](https://img.shields.io/badge/pod-v1.5.3-green.svg)](https://cocoapods.org/?q=YZFrame)
 [![Platform](https://img.shields.io/badge/platform-ios-red.svg)](https://github.com/micyo202/YZFrame)
 [![Support](https://img.shields.io/badge/support-iOS10+-blue.svg)](https://www.apple.com/nl/ios)
@@ -32,9 +32,10 @@ YZFrame
 |    ├── YZRSA
 |    ├── YZMD5
 |    ├── YZSalt
-├── YZUtils-- 具类
+├── YZUtils-- 工具类
 |    ├── YZJsonUtil-- 处理json结构数据
 |    ├── YZSandBoxUtil-- 沙盒数据保存删除获取等方法
+|    ├── YZUserDefault-- 轻量数据持久化对象方法
 |    ├── YZLocationConverterUtil-- 经纬度相关坐标转换
 |    ├── YZIPAddressUtil-- 获取IP地址
 ├── YZAuthID-- 指纹、面容识别方法
