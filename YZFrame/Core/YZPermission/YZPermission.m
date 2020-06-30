@@ -10,6 +10,7 @@
 
 #import "YZPermission.h"
 #import "YZUtilsMarcos.h"
+#import <UIKit/UIKit.h>
 
 @interface YZPermission() <CLLocationManagerDelegate>
 

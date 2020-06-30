@@ -21,7 +21,7 @@
 #import "YZUtilsMarcos.h"
 #import "YZColorMarcos.h"
 
-#pragma mark - 自定义扩展方法
+#pragma mark - 自定义扩展分类方法
 #import "UIView+YZ.h"
 #import "UIButton+YZ.h"
 #import "UIDevice+YZ.h"
