@@ -5,7 +5,7 @@
 //  Created by Yanzheng on 2018-10-26.
 //  Copyright © 2018 Yanzheng. All rights reserved.
 //
-//  Version 1.2.0
+//  Version 1.2.1
 //  Modify 2019-07-16
 //
 //  This source code is licensed under the MIT-style license found in the
