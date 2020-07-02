@@ -3,16 +3,8 @@
 <plist version="1.0">
 <dict>
 	<key>compileBitcode</key>
-	<true/>
+	<false/>
 	<key>method</key>
 	<string>development</string>
-	<key>signingStyle</key>
-	<string>automatic</string>
-	<key>stripSwiftSymbols</key>
-	<true/>
-	<key>teamID</key>
-	<string>P346X95V5Q</string>
-	<key>thinning</key>
-	<string>&lt;none&gt;</string>
 </dict>
 </plist>
