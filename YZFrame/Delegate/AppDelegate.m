@@ -29,7 +29,6 @@
     self.window.rootViewController = demoVC;
     [self.window makeKeyAndVisible];
     
-    [self initializeAvoidCrash];    // 防止崩溃
     [self initializeFPS];           // 监测FPS
     
     return YES;
