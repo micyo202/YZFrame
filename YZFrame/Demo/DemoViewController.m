@@ -10,19 +10,9 @@
 
 #import "DemoViewController.h"
 
-//#import <AFNetworking/AFNetworking.h>
-//#import <SDWebImage/UIImageView+WebCache.h>
-#import <UIAlertController+Blocks/UIAlertController+Blocks.h>
-#import <CustomIOSAlertView/CustomIOSAlertView.h>
-#import <LCActionSheet/LCActionSheet.h>
-#import <ActionSheetPicker-3.0/ActionSheetPicker.h>
-#import <YBPopupMenu/YBPopupMenu.h>
-#import <JDStatusBarNotification/JDStatusBarNotification.h>
-#import <MJRefresh/MJRefresh.h>
-
 #import "YZFrame.h"
 
-@interface DemoViewController () <UITableViewDelegate, UITableViewDataSource, YBPopupMenuDelegate>
+@interface DemoViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) YZPermission *yzPermission;   // 权限访问控制类
 
@@ -43,6 +33,7 @@ static NSString *const cellReuseIdentifier = @"cellReuseIdentifier";
     self.title = @"Demo";
     self.view.backgroundColor = UIColor.whiteColor;
     
+    //if (@available(iOS 13.0, *))
     [self.view addSubview:self.titleLabel];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellReuseIdentifier];
     self.tableView.delegate = self;
@@ -75,17 +66,6 @@ static NSString *const cellReuseIdentifier = @"cellReuseIdentifier";
         _tableView.estimatedRowHeight = 0;// 行高度
         _tableView.estimatedSectionHeaderHeight = 0;// 头视图高度
         _tableView.estimatedSectionFooterHeight = 0;// 脚视图高度
-        
-        // 顶部刷新
-        MJRefreshNormalHeader *header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(headerRefreshing)];
-        header.automaticallyChangeAlpha = YES;
-        //header.lastUpdatedTimeLabel.hidden = YES;
-        //header.stateLabel.hidden = YES;
-        _tableView.mj_header = header;
-        
-        // 底部刷新
-        MJRefreshBackNormalFooter *footer = [MJRefreshBackNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(footerRefreshing)];
-        _tableView.mj_footer = footer;
     }
     
     return _tableView;
@@ -97,45 +77,20 @@ static NSString *const cellReuseIdentifier = @"cellReuseIdentifier";
         _data = @[
                   @{@"code" : @"1", @"name" : @"DLog日志输出（请查看控制台）"},
                   @{@"code" : @"2", @"name" : @"加解密（请查看控制台）"},
-                  @{@"code" : @"3", @"name" : @"防止崩溃测试（请查看控制台）"},
-                  @{@"code" : @"4", @"name" : @"UIAlertController -> Alert"},
-                  @{@"code" : @"5", @"name" : @"UIAlertController -> ActionSheet"},
-                  @{@"code" : @"6", @"name" : @"LCActionSheet（Sheet底部选择视图）"},
-                  @{@"code" : @"7", @"name" : @"CustomIOSAlertView自定义弹框视图"},
-                  @{@"code" : @"8", @"name" : @"ActionSheetPicker底部选择器"},
-                  @{@"code" : @"9", @"name" : @"YBPopupMenu气泡菜单"},
-                  @{@"code" : @"10", @"name" : @"JDStatusBarNotification状态栏提示"},
-                  @{@"code" : @"11", @"name" : @"MBProgressHUD提示框"},
-                  @{@"code" : @"12", @"name" : @"相关组件示例"},
-                  @{@"code" : @"13", @"name" : @"YZAuthID指纹ID/面容ID"},
-                  @{@"code" : @"14", @"name" : @"YZPermission权限访问"},
-                  @{@"code" : @"15", @"name" : @"YZJsonUtil转换"},
-                  @{@"code" : @"16", @"name" : @"YZSandBoxUtil存储读取"},
-                  @{@"code" : @"17", @"name" : @"YZVerify校验方法"},
-                  @{@"code" : @"18", @"name" : @"YZLocationConverterUtil经纬度转换"},
-                  @{@"code" : @"19", @"name" : @"YZIPAddressUtil获取IP地址"},
-                  @{@"code" : @"20", @"name" : @"YZRoundedBorder自定义多圆角视图标签"},
-                  @{@"code" : @"21", @"name" : @"YZUserDefaule存储读取"},
-                  @{@"code" : @"22", @"name" : @"YZDate日期类型格式转换"}
+                  @{@"code" : @"3", @"name" : @"HUD提示框"},
+                  @{@"code" : @"4", @"name" : @"YZAuthID指纹ID/面容ID"},
+                  @{@"code" : @"5", @"name" : @"YZPermission权限访问"},
+                  @{@"code" : @"6", @"name" : @"YZJsonUtil转换"},
+                  @{@"code" : @"7", @"name" : @"YZSandBoxUtil存储读取"},
+                  @{@"code" : @"8", @"name" : @"YZVerify校验方法"},
+                  @{@"code" : @"9", @"name" : @"YZLocationConverterUtil经纬度转换"},
+                  @{@"code" : @"10", @"name" : @"YZIPAddressUtil获取IP地址"},
+                  @{@"code" : @"11", @"name" : @"YZRoundedBorder自定义多圆角视图标签"},
+                  @{@"code" : @"12", @"name" : @"YZUserDefaule存储读取"},
+                  @{@"code" : @"13", @"name" : @"YZDate日期类型格式转换"}
                   ];
     }
     return _data;
-}
-
-#pragma mark - 顶部刷新方法
-- (void)headerRefreshing {
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        // 结束刷新
-        [self.tableView.mj_header endRefreshing];
-    });
-}
-
-#pragma mark - 底部刷新方法
-- (void)footerRefreshing {
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        // 结束刷新
-        [self.tableView.mj_footer endRefreshing];
-    });
 }
 
 #pragma mark - <UITableView>表格数据代理方法
@@ -161,129 +116,81 @@ static NSString *const cellReuseIdentifier = @"cellReuseIdentifier";
     }
     if(2 == code){
         NSString *str = @"Yanzheng";
-        NSString *key = @"com.micyo";
-        NSLog(@"原始字符串：%@", str);
-        NSLog(@"Salt撒盐：%@", [YZSalt encryptString:str length:2]);
-        NSLog(@"Base64编码：%@", [YZBase64 encodeString:str]);
-        NSLog(@"Base64解码：%@", [YZBase64 decodeString:@"WWFuemhlbmc="]);
-        NSLog(@"AES加密：%@", [YZAES encryptString:str key:key]);
-        NSLog(@"AES解密：%@", [YZAES decryptString:@"YgdQb8aHUwy+6mzuHEMdkA==" key:key]);
-        NSLog(@"MD5加密：%@", [YZMD5 encryptString:str]);
+        NSString *key = @"https://github.com/micyo202";
+        DLog(@"原始字符串：%@", str);
+        DLog(@"Salt撒盐：%@", [YZSalt encryptString:str length:2]);
+        DLog(@"Base64编码：%@", [YZBase64 encodeString:str]);
+        DLog(@"Base64解码：%@", [YZBase64 decodeString:@"WWFuemhlbmc="]);
+        DLog(@"AES加密：%@", [YZAES encryptString:str key:key]);
+        DLog(@"AES解密：%@", [YZAES decryptString:@"YgdQb8aHUwy+6mzuHEMdkA==" key:key]);
+        DLog(@"MD5加密：%@", [YZMD5 encryptString:str]);
     }
     if(3 == code){
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
         
-        NSString *nilStr = nil;
+        UIAlertAction *showTipMessageInView = [UIAlertAction actionWithTitle:@"showTipMessageInView" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            [MBProgressHUD showTipMessageInView:@"提示信息"];
+        }];
+        UIAlertAction *showSuccessMessage = [UIAlertAction actionWithTitle:@"showSuccessMessage" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            [MBProgressHUD showSuccessMessage:@"提示信息"];
+        }];
+        UIAlertAction *showInfoMessage = [UIAlertAction actionWithTitle:@"showInfoMessage" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            [MBProgressHUD showInfoMessage:@"提示信息"];
+        }];
+        UIAlertAction *showWarnMessage = [UIAlertAction actionWithTitle:@"showWarnMessage" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            [MBProgressHUD showWarnMessage:@"提示信息"];
+        }];
+        UIAlertAction *showErrorMessage = [UIAlertAction actionWithTitle:@"showErrorMessage" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            [MBProgressHUD showErrorMessage:@"提示信息"];
+        }];
+        UIAlertAction *showTopTipMessage = [UIAlertAction actionWithTitle:@"showTopTipMessage" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            [MBProgressHUD showTopTipMessage:@"提示信息" isWindow:YES];
+        }];
+        UIAlertAction *showActivityMessageInView = [UIAlertAction actionWithTitle:@"showActivityMessageInView" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            [MBProgressHUD showActivityMessageInView:@"加载中..." delay:2.f];
+        }];
+        UIAlertAction *showActivity = [UIAlertAction actionWithTitle:@"showActivity" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            [SVProgressHUD showActivityDelay:2.f];
+        }];
+        UIAlertAction *showActivityMessage = [UIAlertAction actionWithTitle:@"showActivityMessage" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            [SVProgressHUD showActivityMessage:@"加载中..." delay:2.f];
+        }];
+        UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"Default" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            DLog(@"Default");
+        }];
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+            DLog(@"Cancel");
+        }];
+        UIAlertAction *destructiveAction = [UIAlertAction actionWithTitle:@"Destructive" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
+            DLog(@"Destructive");
+        }];
         
-        NSMutableArray *array = [NSMutableArray array];
-        [array addObject:nilStr];
+        [alertController addAction:showTipMessageInView];
+        [alertController addAction:showSuccessMessage];
+        [alertController addAction:showInfoMessage];
+        [alertController addAction:showWarnMessage];
+        [alertController addAction:showErrorMessage];
+        [alertController addAction:showTopTipMessage];
+        [alertController addAction:showActivityMessageInView];
+        [alertController addAction:showActivity];
+        [alertController addAction:showActivityMessage];
+        [alertController addAction:defaultAction];
+        [alertController addAction:cancelAction];
+        [alertController addAction:destructiveAction];
         
-        /*
-        NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
-        [dict setObject:nilStr forKey:nilStr];
-        */
-        
+        [self presentViewController:alertController animated:YES completion:nil];
+
     }
     if(4 == code){
-        [UIAlertController showAlertInViewController:self withTitle:@"标题" message:@"这是消息内容" cancelButtonTitle:@"取消-0" destructiveButtonTitle:@"确定-1" otherButtonTitles:@[@"选项-2", @"选项-3", @"选项-4"] tapBlock:^(UIAlertController * _Nonnull controller, UIAlertAction * _Nonnull action, NSInteger buttonIndex) {
-            NSLog(@"点击按钮序号：%ld", buttonIndex);
+        [[YZAuthID alloc] yz_showAuthIDWithDescribe:nil block:^(YZAuthIDState state, NSError *error) {
+            if (state == YZAuthIDStateSuccess) {    // TouchID/FaceID验证成功
+                DLog(@"验证成功");
+            }else{
+                DLog(@"验证失败");
+            }
         }];
     }
     if(5 == code){
-        [UIAlertController showActionSheetInViewController:self withTitle:@"标题" message:@"这是消息内容" cancelButtonTitle:@"取消-0" destructiveButtonTitle:@"确定-1" otherButtonTitles:@[@"选项-2", @"选项-3", @"选项-4"] popoverPresentationControllerBlock:nil tapBlock:^(UIAlertController * _Nonnull controller, UIAlertAction * _Nonnull action, NSInteger buttonIndex) {
-            NSLog(@"点击按钮序号：%ld", buttonIndex);
-        }];
-    }
-    if(6 == code){
-        LCActionSheet *actionSheet = [LCActionSheet sheetWithTitle:@"提示信息内容" cancelButtonTitle:@"取消-0" clicked:^(LCActionSheet *actionSheet, NSInteger buttonIndex) {
-            NSLog(@"%ld", buttonIndex);
-        } otherButtonTitles:@"确定-1", @"选项-2", @"选项-3", nil];
-        // 红色按钮
-        NSMutableIndexSet *indexSet = [[NSMutableIndexSet alloc] init];
-        [indexSet addIndex:1];
-        actionSheet.destructiveButtonIndexSet = indexSet;
-        actionSheet.destructiveButtonColor = UIColor.redColor;
-        [actionSheet show];
-    }
-    if(7 == code){
-        CustomIOSAlertView *customAlertView = [[CustomIOSAlertView alloc] init];
-        UIView *customView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 300, 200)];
-        customView.backgroundColor = UIColor.orangeColor;
-        customAlertView.containerView= customView;
-        customAlertView.buttonTitles = @[@"选项-0", @"选项-1", @"选项-2"];
-        customAlertView.onButtonTouchUpInside = ^(CustomIOSAlertView *alertView, int buttonIndex) {
-            NSLog(@"%d", buttonIndex);
-        };
-        //customAlertView.useMotionEffects = YES;
-        [customAlertView show];
-    }
-    if(8 == code){
-        NSArray *array = @[@"选项-0", @"选项-1", @"选项-2", @"选项-3", @"选项-4", @"选项-5", @"选项-6"];
-        ActionSheetStringPicker *picker = [[ActionSheetStringPicker alloc] initWithTitle:@"选择器" rows:array initialSelection:0 doneBlock:^(ActionSheetStringPicker *picker, NSInteger selectedIndex, id selectedValue) {
-            NSLog(@"%ld，%@", selectedIndex, selectedValue);
-        } cancelBlock:nil origin:self.view];
-        picker.tapDismissAction = TapActionCancel;
-        [picker showActionSheetPicker];
-    }
-    if(9 == code){
-        [YBPopupMenu showAtPoint:CGPointMake(WIDTH_SCREEN - 20, HEIGHT_TOP - 10) titles:@[@"选项-0", @"选项-1", @"选项-2"] icons:@[@"image_0", @"image_1", @"image_2"] menuWidth:140 otherSettings:^(YBPopupMenu *popupMenu) {
-            popupMenu.dismissOnSelected = YES;
-            popupMenu.isShowShadow = YES;
-            popupMenu.delegate = self;
-            popupMenu.offset = 10;
-            //popupMenu.type = YBPopupMenuTypeDark;
-            popupMenu.rectCorner = UIRectCornerAllCorners;
-        }];
-    }
-    if(10 == code){
-        [JDStatusBarNotification addStyleNamed:@"customStyle" prepare:^JDStatusBarStyle *(JDStatusBarStyle *style) {
-            style.barColor = UIColor.blackColor;
-            //style.font = FontSize(15.f);
-            style.textColor = UIColor.whiteColor;
-            style.progressBarHeight = 1.0+1.0/[[UIScreen mainScreen] scale];
-            return style;
-        }];
-        
-        [JDStatusBarNotification showWithStatus:@"信息提示内容" dismissAfter:1.5f styleName:@"customStyle"];
-    }
-    if(11 == code){
-        LCActionSheet *actionSheet = [LCActionSheet sheetWithTitle:@"MBProgressHUD" cancelButtonTitle:@"取消" clicked:^(LCActionSheet *actionSheet, NSInteger buttonIndex) {
-            if(1 == buttonIndex){
-                [MBProgressHUD showTipMessageInView:@"提示信息"];
-            }
-            if(2 == buttonIndex){
-                [MBProgressHUD showSuccessMessage:@"提示信息"];
-            }
-            if(3 == buttonIndex){
-                [MBProgressHUD showInfoMessage:@"提示信息"];
-            }
-            if(4 == buttonIndex){
-                [MBProgressHUD showWarnMessage:@"提示信息"];
-            }
-            if(5 == buttonIndex){
-                [MBProgressHUD showErrorMessage:@"提示信息"];
-            }
-            if(6 == buttonIndex){
-                [MBProgressHUD showTopTipMessage:@"提示信息" isWindow:YES];
-            }
-            if(7 == buttonIndex){
-                [MBProgressHUD showActivityMessageInView:@"提示信息" timer:2];
-            }
-        } otherButtonTitles:@"showTipMessageInView", @"showSuccessMessage", @"showInfoMessage", @"showWarnMessage", @"showErrorMessage", @"showTopTipMessage", @"showActivityMessageInView", nil];
-        [actionSheet show];
-    }
-    if(12 == code){
-        [self presentViewController:[[NSClassFromString(@"DemoComponentViewController") alloc] init] animated:YES completion:nil];
-    }
-    if(13 == code){
-        [[YZAuthID alloc] yz_showAuthIDWithDescribe:nil block:^(YZAuthIDState state, NSError *error) {
-            if (state == YZAuthIDStateSuccess) {    // TouchID/FaceID验证成功
-                NSLog(@"验证成功");
-            }else{
-                NSLog(@"验证失败");
-            }
-        }];
-    }
-    if(14 == code){
         // 所有权限需在info.plist文件中添加
         self.yzPermission = [[YZPermission alloc] init];
         [self.yzPermission checkLocationWithStatus:^(PermissionStatus status) {
@@ -295,34 +202,34 @@ static NSString *const cellReuseIdentifier = @"cellReuseIdentifier";
         }];
         */
     }
-    if(15 == code){
+    if(6 == code){
         NSArray *obj = @[@{@"id" : @"1", @"name" : @"Java"}, @{@"id" : @"2", @"name" : @"Scala"}, @{@"id" : @"3", @"name" : @"Objective-C"}];
         NSString *jsonStr = [YZJsonUtil JSONStringWithDictionaryOrArray:obj];
-        NSLog(@"%@", jsonStr);
+        DLog(@"%@", jsonStr);
     }
-    if(16 == code){
+    if(7 == code){
         YZSandBoxUtil *yzSandBoxUtil = [[YZSandBoxUtil alloc] init];
         [yzSandBoxUtil writeData:@{@"uuid" : @"xxx"} fileName:@"testFile"]; // 写入
-        NSLog(@"%@", [yzSandBoxUtil readDataWithFileName:@"testFile"]);                   // 读取
+        DLog(@"%@", [yzSandBoxUtil readDataWithFileName:@"testFile"]);                   // 读取
         [yzSandBoxUtil removeFileName:@"testFile"];                         // 删除
     }
-    if(17 == code){
-        NSLog(@"%@", [YZVerify checkEmoji:@"嘻嘻☺️哈哈"] ? @"包含表情返回YES" : @"没有表情返回NO");
+    if(8 == code){
+        DLog(@"%@", [YZVerify checkEmoji:@"嘻嘻☺️哈哈"] ? @"包含表情返回YES" : @"没有表情返回NO");
     }
-    if(18 == code){
+    if(9 == code){
         CLLocationCoordinate2D locationCoordinate2D = CLLocationCoordinate2DMake(34.229047, 108.953198);
         NSLog(@"bd09: latitude=%f, longitude=%f", locationCoordinate2D.latitude, locationCoordinate2D.longitude);
         CLLocationCoordinate2D coverterLocationCoordinate2D = [YZLocationConverterUtil bd09ToGcj02:locationCoordinate2D];
-        NSLog(@"gcj02: latitude=%f, longitude=%f", coverterLocationCoordinate2D.latitude, coverterLocationCoordinate2D.longitude);
+        DLog(@"gcj02: latitude=%f, longitude=%f", coverterLocationCoordinate2D.latitude, coverterLocationCoordinate2D.longitude);
     }
-    if(19 == code){
+    if(10 == code){
         YZIPAddressUtil *ipUtil = [[YZIPAddressUtil alloc] init];
-        NSLog(@"IP地址为%@", [ipUtil getIPAddress:YES]);
+        DLog(@"IP地址为%@", [ipUtil getIPAddress:YES]);
     }
-    if(20 == code){
+    if(11 == code){
         [self presentViewController:[[NSClassFromString(@"DemoRoundedBorderViewController") alloc] init] animated:YES completion:nil];
     }
-    if(21 == code){
+    if(12 == code){
         [YZUserDefault saveUserDefaultObject:@{@"username" : @"Micyo", @"password" : @"123456"} key:@"UserInfo"];
         NSDictionary *userInfo = [YZUserDefault getUserDefaultObjectByKey:@"UserInfo"];
         DLog(@"%@", userInfo);
@@ -330,7 +237,7 @@ static NSString *const cellReuseIdentifier = @"cellReuseIdentifier";
         NSDictionary *userInfoAfter = [YZUserDefault getUserDefaultObjectByKey:@"UserInfo"];
         DLog(@"%@", userInfoAfter);
     }
-    if(22 == code){
+    if(13 == code){
         NSDate *now = [NSDate date];
         NSString *timestamp = [NSString stringWithFormat:@"%ld", (long)[now timeIntervalSince1970]];
         DLog(@"%@", timestamp);
@@ -342,13 +249,8 @@ static NSString *const cellReuseIdentifier = @"cellReuseIdentifier";
         DLog(@"%ld", [now seconds]);
         DLog(@"%ld", [now weekday]);
         
-        DLog(@"%@", [NSDate yz_dateWithFormat_yyyy_MM_string:@"2019-07-14 20:19:00"]);
+        DLog(@"%@", [NSDate yz_dateWithFormat_yyyy_MM_string:@"2021-01-03 16:19:08"]);
     }
-}
-
-#pragma mark - <YBPopupMenuDelegate>代理方法
-- (void)ybPopupMenu:(YBPopupMenu *)ybPopupMenu didSelectedAtIndex:(NSInteger)index {
-    NSLog(@"%ld", index);
 }
 
 - (void)didReceiveMemoryWarning {

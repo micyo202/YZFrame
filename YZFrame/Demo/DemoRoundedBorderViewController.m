@@ -34,7 +34,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.title = @"DemoRoundedBorder";
+    self.title = @"组件示例";
     self.view.backgroundColor = UIColor.whiteColor;
     
     self.backBtn = [UIButton buttonWithType:UIButtonTypeSystem];
