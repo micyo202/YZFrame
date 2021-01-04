@@ -39,7 +39,7 @@
     return model;
 }
 
-#pragma mark - 设备详细型号
+#pragma mark - 设备详细型号（参考：https://www.theiphonewiki.com/wiki/Models）
 - (NSString *)deviceModel {
     struct utsname systemInfo;
     uname(&systemInfo);
@@ -80,6 +80,11 @@
                            @"iPhone12,1" : @"iPhone 11",
                            @"iPhone12,3" : @"iPhone 11 Pro",
                            @"iPhone12,5" : @"iPhone 11 Pro Max",
+                           @"iPhone12,8" : @"iPhone SE2",
+                           @"iPhone13,1" : @"iPhone 12 Mini",
+                           @"iPhone13,2" : @"iPhone 12",
+                           @"iPhone13,3" : @"iPhone 12 Pro",
+                           @"iPhone13,4" : @"iPhone 12 Pro Max",
                            // iPad
                            @"iPad1,1" : @"iPad 1",
                            @"iPad2,1" : @"iPad 2",
@@ -130,10 +135,18 @@
                            @"iPad8,6" : @"iPad Pro 3 (12.9-inch)",
                            @"iPad8,7" : @"iPad Pro 3 (12.9-inch)",
                            @"iPad8,8" : @"iPad Pro 3 (12.9-inch)",
+                           @"iPad8,9" : @"iPad Pro 2 (11-inch)",
+                           @"iPad8,10" : @"iPad Pro 2 (11-inch)",
+                           @"iPad8,11" : @"iPad Pro 4 (12.9-inch)",
+                           @"iPad8,12" : @"iPad Pro 4 (12.9-inch)",
                            @"iPad11,1" : @"iPad mini 5",
                            @"iPad11,2" : @"iPad mini 5",
                            @"iPad11,3" : @"iPad Air 3",
                            @"iPad11,4" : @"iPad Air 3",
+                           @"iPad11,6" : @"iPad 8",
+                           @"iPad11,7" : @"iPad 8",
+                           @"iPad13,1" : @"iPad Air 4",
+                           @"iPad13,2" : @"iPad Air 4",
                            // Apple Watch
                            @"Watch1,1" : @"Apple Watch",
                            @"Watch1,2" : @"Apple Watch",
@@ -149,6 +162,18 @@
                            @"Watch4,2" : @"Apple Watch Series 4",
                            @"Watch4,3" : @"Apple Watch Series 4",
                            @"Watch4,4" : @"Apple Watch Series 4",
+                           @"Watch5,1" : @"Apple Watch Series 5",
+                           @"Watch5,2" : @"Apple Watch Series 5",
+                           @"Watch5,3" : @"Apple Watch Series 5",
+                           @"Watch5,4" : @"Apple Watch Series 5",
+                           @"Watch5,9" : @"Apple Watch Series SE",
+                           @"Watch5,10" : @"Apple Watch Series SE",
+                           @"Watch5,11" : @"Apple Watch Series SE",
+                           @"Watch5,12" : @"Apple Watch Series SE",
+                           @"Watch6,1" : @"Apple Watch Series 6",
+                           @"Watch6,2" : @"Apple Watch Series 6",
+                           @"Watch6,3" : @"Apple Watch Series 6",
+                           @"Watch6,4" : @"Apple Watch Series 6",
                            // Simulator
                            @"i386" : @"iPhone Simulator",
                            @"x86_64" : @"iPhone Simulator"

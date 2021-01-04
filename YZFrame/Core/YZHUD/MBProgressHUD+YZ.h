@@ -14,18 +14,18 @@
 
 + (void)showTipMessageInWindow:(NSString*)message;
 + (void)showTipMessageInView:(NSString*)message;
-+ (void)showTipMessageInWindow:(NSString*)message timer:(int)aTimer;
-+ (void)showTipMessageInView:(NSString*)message timer:(int)aTimer;
++ (void)showTipMessageInWindow:(NSString*)message delay:(float)delay;
++ (void)showTipMessageInView:(NSString*)message delay:(float)delay;
 
 + (void)showActivityMessageInWindow:(NSString*)message;
 + (void)showActivityMessageInView:(NSString*)message;
-+ (void)showActivityMessageInWindow:(NSString*)message timer:(int)aTimer;
-+ (void)showActivityMessageInView:(NSString*)message timer:(int)aTimer;
++ (void)showActivityMessageInWindow:(NSString*)message delay:(float)delay;
++ (void)showActivityMessageInView:(NSString*)message delay:(float)delay;
 
-+ (void)showSuccessMessage:(NSString *)message;
-+ (void)showErrorMessage:(NSString *)message;
 + (void)showInfoMessage:(NSString *)message;
++ (void)showSuccessMessage:(NSString *)message;
 + (void)showWarnMessage:(NSString *)message;
++ (void)showErrorMessage:(NSString *)message;
 
 + (void)showCustomIconInWindow:(NSString *)iconName message:(NSString *)message;
 + (void)showCustomIconInView:(NSString *)iconName message:(NSString *)message;

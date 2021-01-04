@@ -27,6 +27,7 @@
 #import "UIDevice+YZ.h"
 #import "UIColor+YZ.h"
 #import "MBProgressHUD+YZ.h"
+#import "SVProgressHUD+YZ.h"
 
 #pragma mark - 自定义组件
 #import "YZFPSLabel.h"
@@ -49,19 +50,5 @@
 
 #pragma mark - 第三方库
 #import <YYKit/YYKit.h>
-
-/*
-#import <YYKit/YYKit.h>
-#import <AFNetworking/AFNetworking.h>
-#import <SDWebImage/UIImageView+WebCache.h>
-#import <UIAlertController+Blocks/UIAlertController+Blocks.h>
-#import <CustomIOSAlertView/CustomIOSAlertView.h>
-#import <LCActionSheet/LCActionSheet.h>
-#import <ActionSheetPicker-3.0/ActionSheetPicker.h>
-#import <YBPopupMenu/YBPopupMenu.h>
-#import <JDStatusBarNotification/JDStatusBarNotification.h>
-#import <MJRefresh/MJRefresh.h>
-#import <SDCycleScrollView/SDCycleScrollView.h>
-*/
 
 #endif /* YZFrame_h */

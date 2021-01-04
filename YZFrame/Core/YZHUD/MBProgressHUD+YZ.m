@@ -18,83 +18,83 @@
 @implementation MBProgressHUD (YZ)
 
 + (MBProgressHUD*)createMBProgressHUDviewWithMessage:(NSString*)message isWindiw:(BOOL)isWindow {
-    UIView  *view = isWindow? (UIView*)[UIApplication sharedApplication].delegate.window:[self getCurrentUIVC].view;
+    UIView  *view = isWindow ? (UIView*)[UIApplication sharedApplication].delegate.window : [self getCurrentUIVC].view;
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
+    hud.mode = MBProgressHUDModeIndeterminate;
     hud.animationType = MBProgressHUDAnimationZoom;
-    hud.label.text = message ? message : @"加载中...";
+    hud.label.text = message;
     hud.label.font = [UIFont systemFontOfSize:15.f];
-    hud.removeFromSuperViewOnHide = YES;
-    hud.bezelView.backgroundColor = [UIColor blackColor];   // 设置背景颜色
-    hud.contentColor = [UIColor whiteColor];    // 设置字体颜色
+    //hud.bezelView.backgroundColor = [UIColor blackColor];   // 设置背景颜色
+    //hud.contentColor = [UIColor whiteColor];                // 设置字体颜色
     return hud;
 }
 
 #pragma mark - show Tip
 + (void)showTipMessageInWindow:(NSString*)message {
-    [self showTipMessage:message isWindow:true timer:2.f];
+    [self showTipMessage:message isWindow:true delay:2.f];
 }
 
 + (void)showTipMessageInView:(NSString*)message {
-    [self showTipMessage:message isWindow:false timer:2.f];
+    [self showTipMessage:message isWindow:false delay:2.f];
 }
 
-+ (void)showTipMessageInWindow:(NSString*)message timer:(int)aTimer {
-    [self showTipMessage:message isWindow:true timer:aTimer];
++ (void)showTipMessageInWindow:(NSString*)message delay:(float)delay; {
+    [self showTipMessage:message isWindow:true delay:delay];
 }
 
-+ (void)showTipMessageInView:(NSString*)message timer:(int)aTimer {
-    [self showTipMessage:message isWindow:false timer:aTimer];
++ (void)showTipMessageInView:(NSString*)message delay:(float)delay; {
+    [self showTipMessage:message isWindow:false delay:delay];
 }
 
-+ (void)showTipMessage:(NSString*)message isWindow:(BOOL)isWindow timer:(int)aTimer {
++ (void)showTipMessage:(NSString*)message isWindow:(BOOL)isWindow delay:(float)delay; {
     MBProgressHUD *hud = [self createMBProgressHUDviewWithMessage:message isWindiw:isWindow];
     hud.mode = MBProgressHUDModeText;
-    [hud hideAnimated:YES afterDelay:aTimer];
+    [hud hideAnimated:YES afterDelay:delay];
 }
 
 #pragma mark - show Activity
 + (void)showActivityMessageInWindow:(NSString*)message {
-    [self showActivityMessage:message isWindow:true timer:0];
+    [self showActivityMessage:message isWindow:true delay:0];
 }
 
 + (void)showActivityMessageInView:(NSString*)message {
-    [self showActivityMessage:message isWindow:false timer:0];
+    [self showActivityMessage:message isWindow:false delay:0];
 }
 
-+ (void)showActivityMessageInWindow:(NSString*)message timer:(int)aTimer {
-    [self showActivityMessage:message isWindow:true timer:aTimer];
++ (void)showActivityMessageInWindow:(NSString*)message delay:(float)delay; {
+    [self showActivityMessage:message isWindow:true delay:delay];
 }
 
-+ (void)showActivityMessageInView:(NSString*)message timer:(int)aTimer {
-    [self showActivityMessage:message isWindow:false timer:aTimer];
++ (void)showActivityMessageInView:(NSString*)message delay:(float)delay; {
+    [self showActivityMessage:message isWindow:false delay:delay];
 }
 
-+ (void)showActivityMessage:(NSString*)message isWindow:(BOOL)isWindow timer:(int)aTimer {
++ (void)showActivityMessage:(NSString*)message isWindow:(BOOL)isWindow delay:(float)delay; {
     MBProgressHUD *hud  =  [self createMBProgressHUDviewWithMessage:message isWindiw:isWindow];
     hud.mode = MBProgressHUDModeIndeterminate;
-    if (aTimer>0) {
-        [hud hideAnimated:YES afterDelay:aTimer];
+    if (delay > 0) {
+        [hud hideAnimated:YES afterDelay:delay];
     }
 }
 
 #pragma mark - show Image
-+ (void)showSuccessMessage:(NSString *)message {
-    NSString *name =@"MBProgressHUD+YZ.bundle/MBProgressHUD/MBHUD_Success";
-    [self showCustomIconInWindow:name message:message];
-}
-
-+ (void)showErrorMessage:(NSString *)message {
-    NSString *name =@"MBProgressHUD+YZ.bundle/MBProgressHUD/MBHUD_Error";
-    [self showCustomIconInWindow:name message:message];
-}
-
 + (void)showInfoMessage:(NSString *)message {
-    NSString *name =@"MBProgressHUD+YZ.bundle/MBProgressHUD/MBHUD_Info";
+    NSString *name =@"MBProgressHUD+YZ.bundle/MBProgressHUD/info";
+    [self showCustomIconInWindow:name message:message];
+}
+
++ (void)showSuccessMessage:(NSString *)message {
+    NSString *name =@"MBProgressHUD+YZ.bundle/MBProgressHUD/success";
     [self showCustomIconInWindow:name message:message];
 }
 
 + (void)showWarnMessage:(NSString *)message {
-    NSString *name =@"MBProgressHUD+YZ.bundle/MBProgressHUD/MBHUD_Warn";
+    NSString *name =@"MBProgressHUD+YZ.bundle/MBProgressHUD/warn";
+    [self showCustomIconInWindow:name message:message];
+}
+
++ (void)showErrorMessage:(NSString *)message {
+    NSString *name =@"MBProgressHUD+YZ.bundle/MBProgressHUD/error";
     [self showCustomIconInWindow:name message:message];
 }
 
