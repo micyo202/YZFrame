@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name         = 'YZFrame'
-    s.version      = '1.3.0'
+    s.version      = '1.3.1'
     s.summary      = 'YZFrame is an agile class library for development'
     s.homepage     = 'https://github.com/micyo202/YZFrame'
     s.license      = { :type => 'MIT', :file => 'LICENSE' }
