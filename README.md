@@ -1,10 +1,10 @@
 # YZFrame
 
 [![Build Status](https://travis-ci.org/micyo202/YZFrame.svg)](https://travis-ci.org/micyo202/YZFrame)
-[![Version](https://img.shields.io/badge/version-1.2.1-yellow.svg)](https://github.com/micyo202/YZFrame)
-[![Cocoapods](https://img.shields.io/badge/pod-v1.5.3-green.svg)](https://cocoapods.org/?q=YZFrame)
+[![Version](https://img.shields.io/badge/version-1.3.0-yellow.svg)](https://github.com/micyo202/YZFrame)
+[![Cocoapods](https://img.shields.io/badge/pod-1.10.0-green.svg)](https://cocoapods.org/?q=YZFrame)
 [![Platform](https://img.shields.io/badge/platform-ios-red.svg)](https://github.com/micyo202/YZFrame)
-[![Support](https://img.shields.io/badge/support-iOS10+-blue.svg)](https://www.apple.com/nl/ios)
+[![Support](https://img.shields.io/badge/support-iOS12+-blue.svg)](https://www.apple.com/nl/ios)
 [![License MIT](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://github.com/micyo202/YZFrame/blob/master/LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/micyo202/YZFrame.svg?style=social&label=Stars)](https://github.com/micyo202/YZFrame)
 [![GitHub forks](https://img.shields.io/github/forks/micyo202/YZFrame.svg?style=social&label=Fork)](https://github.com/micyo202/YZFrame)
@@ -16,7 +16,7 @@ iOS敏捷开发类库，集成并封装一系列常用类库方法，避免重�
 
 在使用的地方导入头文件：`#import "YZFrame.h"`即可
 
-⚠️*注：YZFrame中已包含YYKit、MBProgressHUD*
+⚠️*注：YZFrame中已包含YYKit、MBProgressHUD、SVProgressHUD*
 
 ### 项目结构
 ```lua
@@ -49,16 +49,3 @@ YZFrame
 ```
 
 ⚠️注：详细使用方法请参考项目中Demo模块
-
-### Demo包含以下相关代码：
-* AvoidCrash防止 NSArray、NSDictionary 崩溃闪退
-* UIAlertController+Blocks弹框提示
-* CustomIOSAlertView自定义弹出对话视图
-* LCActionSheet底部弹出选择列表组件
-* ActionSheetPicker-3.0底部弹出选择器
-* JDStatusBarNotification状态栏提醒
-* YBPopupMenu气泡pop菜单
-* MJRefresh下拉刷新、上拉加载
-* YYKit一系列工具类组件
-* SDWebImage网络图片加载
-* SDCycleScrollView轮播图
