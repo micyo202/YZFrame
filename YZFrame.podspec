@@ -13,5 +13,4 @@ Pod::Spec.new do |s|
     s.dependency 'YYKit'
     s.dependency 'MBProgressHUD'
     s.dependency 'SVProgressHUD'
-
 end
