@@ -428,7 +428,6 @@
 				ABFF480F2182CCF6003C2A6E /* Sources */,
 				ABFF48102182CCF6003C2A6E /* Frameworks */,
 				ABFF48112182CCF6003C2A6E /* Resources */,
-				1809517A22DB2E9400453669 /* Build Number */,
 				4422033D26EB0DA42C48E76E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -486,24 +485,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1809517A22DB2E9400453669 /* Build Number */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Build Number";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "echo $CONFIGURATION\n\n# Debug Release\nif [ \"Debug\" == \"${CONFIGURATION}\" ]\n\nthen\n\nbuildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${INFOPLIST_FILE}\")\n\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${INFOPLIST_FILE}\"\n\necho \"Build Number Increase\"\n\nfi\n";
-		};
 		4422033D26EB0DA42C48E76E /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
