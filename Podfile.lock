@@ -6,9 +6,9 @@ PODS:
   - YYKit/no-arc (1.0.9)
 
 DEPENDENCIES:
-  - MBProgressHUD
-  - SVProgressHUD
-  - YYKit
+  - MBProgressHUD (~> 1.2.0)
+  - SVProgressHUD (~> 2.2.5)
+  - YYKit (~> 1.0.9)
 
 SPEC REPOS:
   trunk:
@@ -21,6 +21,6 @@ SPEC CHECKSUMS:
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: fd955193598d9df0abc424e2440f5e610a412ec2
+PODFILE CHECKSUM: 80ca11adf0dd7097c8e5f767b00ae0d1c7d6c6ef
 
 COCOAPODS: 1.10.0
