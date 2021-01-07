@@ -25,7 +25,7 @@
 #define HEIGHT_SAFE_AREA        690.f
 #define HEIGHT_SAFE_AREA_BOTTOM 34.f
 
-#pragma mark - iPhoneX系列（包含：iPhoneX、iPhoneXS、iPhoneXR、iPhoneXS Max）
-#define iPhoneX_Series  (WIDTH_SCREEN == 375.f && HEIGHT_SCREEN == 812.f) || (WIDTH_SCREEN == 414.f && HEIGHT_SCREEN == 896.f)
+#pragma mark - iPhone全屏系列（包含：iPhoneX系列、iPhone11系列、iPhone12系列）
+#define iPhone_Full_Screen_Series  (WIDTH_SCREEN == 375.f && HEIGHT_SCREEN == 812.f) || (WIDTH_SCREEN == 414.f && HEIGHT_SCREEN == 896.f) || (WIDTH_SCREEN == 390.f && HEIGHT_SCREEN == 844.f) || (WIDTH_SCREEN == 428.f && HEIGHT_SCREEN == 926.f)
 
 #endif /* YZScreenMarcos_h */

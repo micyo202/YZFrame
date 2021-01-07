@@ -26,7 +26,7 @@
 
 - (void)yz_showAuthIDWithDescribe:(NSString *)describe block:(YZAuthIDStateBlock)block {
     if(!describe) {
-        if(iPhoneX_Series){
+        if(iPhone_Full_Screen_Series){
             describe = @"验证已有面容";
         }else{
             describe = @"通过Home键验证已有指纹";
